@@ -1,5 +1,6 @@
 import com.ev34j.mindstorm.motor.SteeringMotors;
 import com.ev34j.mindstorm.sensor.Ev3TouchSensor;
+import com.ev34j.mindstorm.sound.Ev3Sound;
 
 public class TouchWallBouncer {
 
@@ -10,18 +11,18 @@ public class TouchWallBouncer {
 
     // Wait for button press
     System.out.println("Press button to start");
+    Ev3Sound.sayAsEnglish("Press button to start");
     touch.waitUntilBumped();
 
     // Start motors
     steering.on(0, 25);
 
     // Wait for button press
-    System.out.println("Run into wall stop");
     touch.waitUntilPressed();
 
     // Back up and stop
-    System.out.println("Backing up");
-    steering.onForRotations(1, 0, -50);
+    steering.onForRotations(2, 0, -50);
+    Ev3Sound.sayAsEnglish("I hit the wall");
     steering.waitUntilStopped();
   }
 }
