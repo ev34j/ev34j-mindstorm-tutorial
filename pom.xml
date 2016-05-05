@@ -15,7 +15,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.build.timestamp.format>yyyy-MM-dd-HH:mm:ss</maven.build.timestamp.format>
 
-    <assembly.version>2.5.4</assembly.version>
+    <assembly.version>2.6</assembly.version>
     <deploy.version>2.8.2</deploy.version>
 
     <maven.compiler.version>3.5</maven.compiler.version>
@@ -33,7 +33,7 @@
     <dependency>
       <groupId>com.github.ev3dev-lang-java.ev34j</groupId>
       <artifactId>ev34j-mindstorm</artifactId>
-      <version>v0.3.0</version>
+      <version>v0.3.2</version>
     </dependency>
   </dependencies>
 
@@ -55,18 +55,20 @@
 
           <execution>
             <id>myev3robot</id>
-            <goals>
-              <goal>attached</goal>
-            </goals>
             <phase>package</phase>
+            <goals>
+              <goal>single</goal>
+            </goals>
             <configuration>
-              <finalName>myev3robot-1.0</finalName>
+              <!-- Specify the name for the jar file here. It must match the JAR_FILE value in Makefile -->
+              <finalName>myev3robot</finalName>
               <descriptorRefs>
                 <descriptorRef>jar-with-dependencies</descriptorRef>
               </descriptorRefs>
               <archive>
                 <manifest>
-                  <mainClass>MyEv3Robot</mainClass>
+                  <!-- Specify the class name you want to execute here -->
+                  <mainClass>MotorUsage</mainClass>
                   <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                 </manifest>
               </archive>
