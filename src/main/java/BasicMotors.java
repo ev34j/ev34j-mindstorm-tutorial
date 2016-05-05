@@ -3,9 +3,9 @@ import com.ev34j.mindstorm.motor.LargeMotor;
 import com.ev34j.mindstorm.motor.SteeringMotors;
 import com.ev34j.mindstorm.motor.TankMotors;
 
-public class MotorUsage {
+public class BasicMotors {
 
-  public static void main(final String[] args) {
+  public static void main(String[] args) {
 
     // Run the motors as LargeMotor objects
     System.out.println("Trying out LargeMotors");
@@ -27,26 +27,26 @@ public class MotorUsage {
 
     // Run the motors as a SteeringMotors object
     System.out.println("Trying out SteeringMotors");
-    final SteeringMotors sm = new SteeringMotors("A", "B");
+    SteeringMotors steering = new SteeringMotors("A", "B");
 
     // Go forward at a 45 degree angle
-    sm.onForRotations(2, 50, 25);
-    sm.waitUntilStopped();
+    steering.onForRotations(2, 50, 25);
+    steering.waitUntilStopped();
 
     // Go back at a 45 degree angle
-    sm.onForRotations(2, 50, -25);
-    sm.waitUntilStopped();
+    steering.onForRotations(2, 50, -25);
+    steering.waitUntilStopped();
 
     // Run the motors as a TankMotors object
     System.out.println("Trying out TankMotors");
-    final TankMotors tm = new TankMotors("A", "B");
+    TankMotors tank = new TankMotors("A", "B");
 
     // Go forward at a 45 degree angle
-    tm.onForRotations(2, 12, 25);
-    tm.waitUntilStopped();
+    tank.onForRotations(2, 12, 25);
+    tank.waitUntilStopped();
 
     // Go back at a 45 degree angle
-    tm.onForRotations(2, -12, -25);
-    tm.waitUntilStopped();
+    tank.onForRotations(2, -12, -25);
+    tank.waitUntilStopped();
   }
 }
