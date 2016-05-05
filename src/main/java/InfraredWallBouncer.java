@@ -10,7 +10,7 @@ public class InfraredWallBouncer {
     SteeringMotors sm = new SteeringMotors("A", "B");
 
     // Wait for button press
-    System.out.println("Pass hadn in front of IR sensor to start");
+    System.out.println("Pass hand in front of IR sensor to start");
     while (ir.getDistancePercent() > 10) {
       Delay.delayMillis(10);
     }
@@ -22,7 +22,7 @@ public class InfraredWallBouncer {
     Delay.delayMillis(500);
 
     // Wait to get close to wall
-    System.out.println("Get close to wall to backup");
+    System.out.println("Get close to wall before backuping up");
     int lastVal = -1;
     while (true) {
       int currVal = ir.getDistancePercent();
