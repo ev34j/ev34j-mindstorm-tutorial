@@ -1,9 +1,14 @@
 # Mindstorm Tutorial
 Before you can start programming the EV3 you have to:
 
-1. Install software on your OSX machine 
-2. Create a bootable image of the [EV3DEV](http://www.ev3dev.org) Linux distro on an SD card
-3. Install a wi-fi dongle in your EV3
+1. Install a Wi-Fi dongle in your EV3
+2. Install software on your OSX machine 
+3. Create a bootable image of the [EV3DEV](http://www.ev3dev.org) Linux distro on an SD card
+
+# Wi-Fi dongle installation
+  Sadly, the *only* wi-fi dongle that works with the EV3 is the bulky
+[NETGEAR N150 Wi-Fi USB Adapter (WNA1100)](http://www.amazon.com/NETGEAR-N150-Wi-Fi-Adapter-WNA1100/dp/B0036R9XRU).
+For unknow reasons, Lego does not support any smaller dongles.  
 
 # Software installation for your OSX machine
 
@@ -58,5 +63,5 @@ cd mindstorm-tutorial
 ls
 ```
 
-# Instructions for creating 
+# Creating a bootable image 
 
