@@ -1,14 +1,10 @@
 # Mindstorm Tutorial
 Before you can start programming the EV3 you have to:
 
-1. Install a Wi-Fi dongle in your EV3
-2. Install software on your OSX machine 
-3. Create a bootable image of the [EV3DEV](http://www.ev3dev.org) Linux distro on an SD card
-
-# Wi-Fi dongle installation
-  Sadly, the *only* wi-fi dongle that works with the EV3 is the bulky
-[NETGEAR N150 Wi-Fi USB Adapter (WNA1100)](http://www.amazon.com/NETGEAR-N150-Wi-Fi-Adapter-WNA1100/dp/B0036R9XRU).
-For unknow reasons, Lego does not support any smaller dongles.  
+1. Install software on your OSX machine 
+2. Create a bootable image of the [ev3dev](http://www.ev3dev.org) Linux distro on an SD card
+3. Setup a network connection
+4. Connect to the EV3
 
 # Software installation for your OSX machine
 
@@ -63,5 +59,76 @@ cd mindstorm-tutorial
 ls
 ```
 
-# Creating a bootable image 
+# Create a bootable image for your EV3
+
+These steps summarize [these instructions](http://www.ev3dev.org/docs/getting-started/):
+
+1. [Download](https://github.com/ev3dev/ev3dev/releases) the latest ev3dev image .zip file for the EV3: 
+[ev3dev-jessie-2015-12-30.img](https://github.com/ev3dev/ev3dev/releases/download/ev3dev-jessie-2015-12-30/ev3-ev3dev-jessie-2015-12-30.img.zip) 
+
+Make sure the file you download has an **ev3-** prefix in the name. After the file is downloaded, OSX will unzip the file and
+you will have a **ev3-ev3dev-jessie-2015-12-30.img** file in your download folder.
+
+2. Copy the image to an SD card
+  
+You can do this from the [command line](http://www.ev3dev.org/docs/tutorials/writing-sd-card-image-osx-command-line/)
+or using a GUI tool like [Apple Pi Baker](http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/).
+
+3. Boot your EV3 with the ev3dev SD card
+
+Put the SD card into the slot on the left side of the EV3 and power it up. 
+If things are setup properly on the SD card, you will see LEDS flash orange and the Brickman app load in the display.
+
+# Setup a network connection
+ 
+  Sadly, the *only* wi-fi dongle that works with the native EV3 firmware is the bulky
+[NETGEAR N150 Wi-Fi USB Adapter (WNA1100)](http://www.amazon.com/NETGEAR-N150-Wi-Fi-Adapter-WNA1100/dp/B0036R9XRU).
+The [ev3dev](http://www.ev3dev.org) distro supports the NETGEAR N150, but it also works with smaller dongles, e.g.,
+the [Edimax EW-7811Un](http://www.amazon.com/Edimax-EW-7811Un-150Mbps-Raspberry-Supports/dp/B003MTTJOY).
+Thus, if you are content using Bluetooth for connectivity in the native mode and Wi-Fi in the 
+[ev3dev](http://www.ev3dev.org)
+mode, then go with a smaller dongle. If you want Wi-Fi support in both modes, then you should get the NETGEAR N150.
+
+Please note: the [NETGEAR G54/N150] (http://www.amazon.com/dp/B004VDR37K/ref=twister_B00F4PTSKY) 
+does not work with either mode.
+
+Insert a Wi-Fi dongle in your EV3. In Brickman, navigate to **Wireless and Networks** and then click on **Wi-Fi**.
+You will be able to tell at this point if your Wi-Fi dongle is supported by ev3dev. If it is, you will see the option
+select **Powered** and then **Start Scan**.  You should choose an SID and enter your password. 
+
+# Connect to the EV3 
+
+Once booted and connected to the network, the EV3 should be reachable as **ev3dev**. To verify this is 
+true, open a Terminal window and type:
+
+```bash
+ping ev3dev
+```
+
+You should see something like:
+
+```bash
+PING ev3dev (192.168.1.230): 56 data bytes
+64 bytes from 192.168.1.230: icmp_seq=0 ttl=64 time=556.833 ms
+64 bytes from 192.168.1.230: icmp_seq=1 ttl=64 time=12.056 ms
+64 bytes from 192.168.1.230: icmp_seq=2 ttl=64 time=12.828 ms
+64 bytes from 192.168.1.230: icmp_seq=3 ttl=64 time=8.587 ms
+```
+
+You can terminate the ping command with Control-C.
+
+Now log into **ev3dev* as the user **robot** (using the password **maker**) with ssh:
+
+```bash
+ssh robot@ev3dev
+```
+
+Update the the ev3dev distro to the latest bits with:
+
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+```
+
 
