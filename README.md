@@ -117,7 +117,7 @@ PING ev3dev (192.168.1.230): 56 data bytes
 
 You can terminate the ping command with Control-C.
 
-Now log into **ev3dev* as the user **robot** (using the password **maker**) with ssh:
+Now log into **ev3dev** as the user **robot** (using the password **maker**) with ssh:
 
 ```bash
 ssh robot@ev3dev
