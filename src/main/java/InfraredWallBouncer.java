@@ -20,7 +20,7 @@ public class InfraredWallBouncer {
     // Start motors
     sm.on(0, 15);
 
-    // Delay in case hand is still seen by the IRSensor
+    // Delay in case hand is still seen by the InfraredSensor
     Delay.delayMillis(500);
 
     // Wait to get close to wall
