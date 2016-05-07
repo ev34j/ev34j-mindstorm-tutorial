@@ -12,12 +12,12 @@ public class ReadingMotorPositions {
 
     int count = 0;
     int lastVal = -1;
-    while (count <= 10) {
+    while (count <= 50) {
       int currVal = motor.getPosition();
       if (currVal != lastVal) {
         count++;
         lastVal = currVal;
-        System.out.printf("Medium motor position: %d", lastVal);
+        System.out.printf("Medium motor position: %d\n", lastVal);
       }
       Delay.delayMillis(100);
     }

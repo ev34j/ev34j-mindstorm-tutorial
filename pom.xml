@@ -68,7 +68,7 @@
               <archive>
                 <manifest>
                   <!-- Specify the class name you want to execute here -->
-                  <mainClass>ReadingMotorPosition</mainClass>
+                  <mainClass>ReadingMotorPositions</mainClass>
                   <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                 </manifest>
               </archive>

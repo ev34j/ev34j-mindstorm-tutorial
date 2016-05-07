@@ -12,9 +12,12 @@ LOG_PROP_NAME = logging.properties
 
 default: build scp
 
+clean:
+	mvn clean
+
 build:
 	# Build jar file
-	mvn clean package
+	mvn package
 
 scp:
 	# Copy jar file to EV3
