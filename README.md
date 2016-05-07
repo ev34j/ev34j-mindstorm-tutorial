@@ -16,7 +16,7 @@ or get it [using the Mac App Store](http://itunes.apple.com/us/app/xcode/id49779
   Once you have Xcode installed, open a Terminal window and type:
    
 ```bash
-xcode-select --install
+$ xcode-select --install
 ```
 
 Click the Install button to install the required command line developer tools. 
@@ -65,12 +65,12 @@ Fork button in the uppoer right hand corner. This will create a copy of the repo
 * Open a Terminal window and, using the URL you just copied as the **git clone** argument, clone the repo with:
 
 ```bash
-mkdir git
-cd git
-# username in the next line should be your github account name
-git clone https://github.com/username/mindstorm-tutorial.git
-cd mindstorm-tutorial
-ls
+$ mkdir git
+$ cd git
+$ # username in the next line should be your github account name
+$ git clone https://github.com/username/mindstorm-tutorial.git
+$ cd mindstorm-tutorial
+$ ls
 ```
 
 # Create a bootable image for the EV3
@@ -112,16 +112,13 @@ select **Powered** and then **Start Scan**.  You should choose an SID and enter 
 
 # Connect to the EV3 
 
+## Using ping command
+
 Once booted and connected to the network, the EV3 should be reachable as **ev3dev** from your Mac. 
 To verify this, open a Terminal window and type:
 
 ```bash
-ping ev3dev
-```
-
-You should see something like:
-
-```bash
+$ ping ev3dev
 PING ev3dev (192.168.1.230): 56 data bytes
 64 bytes from 192.168.1.230: icmp_seq=0 ttl=64 time=556.833 ms
 64 bytes from 192.168.1.230: icmp_seq=1 ttl=64 time=12.056 ms
@@ -131,20 +128,34 @@ PING ev3dev (192.168.1.230): 56 data bytes
 
 You can terminate the ping command with Control-C.
 
+The output indicates that your Mac sees the host **ev3dev** at IP 192.168.1.230.
+It is okay if you get a different IP address. 
+
+If you see this output:
+
+```bash
+$ ping ev3dev
+ping: cannot resolve ev3dev: Unknown host
+```
+
+try rebooting your Mac and/or your EV3.
+
+## Using ssh command
+
 Now log into **ev3dev** as the user **robot** (using the password **maker**) with ssh:
 
 ```bash
-ssh robot@ev3dev
+$ ssh robot@ev3dev
 ```
 
-Update the the ev3dev distro to the latest bits with:
+Update the the ev3dev distro with:
 
 ```bash
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get dist-upgrade
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get dist-upgrade
 
-/sbin/shutdown --reboot now
+$ sudo /sbin/shutdown --reboot now
 ```
 
 These commands will download and install the latest and greatest distro bits.
