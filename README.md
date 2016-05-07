@@ -4,7 +4,7 @@
 
 Before you can run Java programs on your EV3 you have to:
 
-1. [Install required Mac software](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Install-required-Mac-software) on your Mac 
+1. [Install required software](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Install-required-Mac-software) on your Mac 
 2. [Create a bootable image](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Create-a-bootable-image-for-the-EV3) of the [ev3dev](http://www.ev3dev.org) Linux distro on an SD card.
 3. [Establish a network connection](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Establish-a-network-connection) between your EV3 and Mac.
 
