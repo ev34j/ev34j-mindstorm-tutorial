@@ -1,12 +1,13 @@
 # Mindstorm Tutorial
-Before you can start programming the EV3 you have to:
 
-1. Install software on your OSX machine 
+Before you can start programming your EV3 you have to:
+
+1. Install software on your Mac 
 2. Create a bootable image of the [ev3dev](http://www.ev3dev.org) Linux distro on an SD card
 3. Setup a network connection
 4. Connect to the EV3
 
-# Software installation for your OSX machine
+# Software installation for your Mac
 
 ## Install Xcode and the OSX CommandLine Tools
   Download the latest version of Xcode from the [Apple developer website](https://developer.apple.com/xcode/download/) 
@@ -26,14 +27,16 @@ also use the Ultimate edition, if you already have that version installed.
 ## Install git 
 You can install [git](https://en.wikipedia.org/wiki/Git_\(software\)) in either of two ways:
 
-* Install with [brew](http://brew.sh) using : **brew install git**
-* [Download](https://git-scm.com) and install the git package.
+* With [brew](http://brew.sh) using : **brew install git**
+* Via the [git installer]((https://git-scm.com)).
 
 ## Install sshpass
   Install sshpass using [these instructions](https://gist.github.com/arunoda/7790979).
 Using sshpass is ordinarily a bad idea because it exposes passwords, but in this case,
 the EV3 password is not sensitive and sshpass is easier to deal with than 
 [ssh-keygen](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2).
+If you are comfortable using ssh-keygen, you can forgo installing sshpass and remove 
+the sshpass command prefix in the Makefile.
 
 ## Create a Github account
 If you do not already have a [Github](https://github.com) account, 
@@ -43,13 +46,13 @@ go to Github and [sign up for one](https://github.com/join).
 Go to the [Mindstorm Tutorial repo](https://github.com/ev3dev-lang-java/mindstorm-tutorial) and click on the 
 fork button in the uppoer right hand corner. This will create a copy of the repo in your Github account.
 
-## Clone your forked Mindstorm Tutorial repo to your OSX machine
+## Clone your forked Mindstorm Tutorial repo to your Mac
 
 * Go to your [GitHub home](https://github.com) and click on your newly forked Mindstorm Tutorial repo.
 
 * Copy the [HTTPS URL](https://help.github.com/articles/which-remote-url-should-i-use/) into your copy/paste buffer.
 
-* Open a terminal and using the URL you just copied as the **git clone** argument, type the following.
+* Open a Terminal window and using the URL you just copied as the **git clone** argument, type the following.
 
 ```bash
 mkdir git
@@ -59,7 +62,7 @@ cd mindstorm-tutorial
 ls
 ```
 
-# Create a bootable image for your EV3
+# Create a bootable image for the EV3
 
 These steps summarize [these instructions](http://www.ev3dev.org/docs/getting-started/):
 
@@ -74,9 +77,9 @@ you will have a **ev3-ev3dev-jessie-2015-12-30.img** file in your download folde
 You can do this from the [command line](http://www.ev3dev.org/docs/tutorials/writing-sd-card-image-osx-command-line/)
 or using a GUI tool like [Apple Pi Baker](http://www.tweaking4all.com/hardware/raspberry-pi/macosx-apple-pi-baker/).
 
-3. Boot your EV3 with the ev3dev SD card
+3. Boot the EV3 with the ev3dev SD card
 
-Put the SD card into the slot on the left side of the EV3 and power it up. 
+Insert the SD card into the EV3 and power it up. 
 If things are setup properly on the SD card, you will see LEDS flash orange and the Brickman app load in the display.
 
 # Setup a network connection
@@ -87,19 +90,19 @@ The [ev3dev](http://www.ev3dev.org) distro supports the NETGEAR N150, but it als
 the [Edimax EW-7811Un](http://www.amazon.com/Edimax-EW-7811Un-150Mbps-Raspberry-Supports/dp/B003MTTJOY).
 Thus, if you are content using Bluetooth for connectivity in the native mode and Wi-Fi in the 
 [ev3dev](http://www.ev3dev.org)
-mode, then go with a smaller dongle. If you want Wi-Fi support in both modes, then you should get the NETGEAR N150.
+mode, then get the smaller dongle. If you want Wi-Fi support in both modes, then you should get the NETGEAR N150.
 
 Please note: the [NETGEAR G54/N150] (http://www.amazon.com/dp/B004VDR37K/ref=twister_B00F4PTSKY) 
 does not work with either mode.
 
-Insert a Wi-Fi dongle in your EV3. In Brickman, navigate to **Wireless and Networks** and then click on **Wi-Fi**.
-You will be able to tell at this point if your Wi-Fi dongle is supported by ev3dev. If it is, you will see the option
+Insert a Wi-Fi dongle in the EV3. Navigate to **Wireless and Networks** in Brickman and then click on **Wi-Fi**.
+You will be able to determine at this point if the Wi-Fi dongle is supported by ev3dev. If it is, you will see the option
 select **Powered** and then **Start Scan**.  You should choose an SID and enter your password. 
 
 # Connect to the EV3 
 
-Once booted and connected to the network, the EV3 should be reachable as **ev3dev**. To verify this is 
-true, open a Terminal window and type:
+Once booted and connected to the network, the EV3 should be reachable as **ev3dev** from your Mac. 
+To verify this, open a Terminal window and type:
 
 ```bash
 ping ev3dev
@@ -131,4 +134,5 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 ```
 
+These commands will download and install the latest and greatest distro bits.
 

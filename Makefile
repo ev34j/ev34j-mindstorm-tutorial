@@ -1,9 +1,12 @@
 # EV3 hostname
-EV3_NAME = ev3
+EV3_NAME = ev3dev
+
 # EV3 password
 EV3_PASSWORD = maker
+
 # This name must match the <finalName> value in pom.xml
 JAR_NAME = myev3robot-jar-with-dependencies.jar
+
 # Logging file name
 LOG_PROP_NAME = logging.properties
 
