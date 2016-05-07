@@ -4,7 +4,7 @@
 
 Before you can run Java programs on your EV3 you have to:
 
-1. [Install required software](wiki/Required-Mac-software-installation) on your Mac 
+1. [[Install required Mac software|Install required Mac software]] on your Mac 
 2. [Create a bootable image](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Create-a-bootable-image-for-the-EV3) of the [ev3dev](http://www.ev3dev.org) Linux distro on an SD card.
 3. [Establish a network connection](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Establish-a-network-connection) between your EV3 and Mac.
 
@@ -16,6 +16,7 @@ You have two options for downloading the repo:
 1. [Clone](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Clone-the-EV34J-Mindstorm-Tutorial-repo) it.
 2. [Fork and clone](https://github.com/ev3dev-lang-java/mindstorm-tutorial/wiki/Fork-and-clone-the-EV34J-Mindstorm-Tutorial-repo) it.
 
-Just cloning is easier, but it will not allow you to push your changes back to github.
+Just cloning it is easier, but it will not allow you to push your changes back to github, 
+which the fork and clone option does.
 
 
