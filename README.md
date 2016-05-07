@@ -1,6 +1,6 @@
-# Mindstorm Tutorial
+# Mindstorm Tutorial Setup
 
-Before you can start programming your EV3 you have to:
+Before you can run Java programs on your EV3 you have to:
 
 1. Install software on your Mac 
 2. Create a bootable image of the [ev3dev](http://www.ev3dev.org) Linux distro on an SD card
@@ -13,30 +13,40 @@ Before you can start programming your EV3 you have to:
   Download the latest version of Xcode from the [Apple developer website](https://developer.apple.com/xcode/download/) 
 or get it [using the Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835).
 
-  Once you have Xcode installed, open a terminal, run **xcode-select --install**, 
-and click the Install button to install the required command line developer tools. 
+  Once you have Xcode installed, open a Terminal window and type:
+   
+```bash
+xcode-select --install
+```
+
+Click the Install button to install the required command line developer tools. 
 Don't worry if you see a message telling you the software cannot be installed because it is 
 not currently available from the Software Update Server. This usually means you already have 
-the latest version installed. You can also get the command line tools from 
-[the Apple developer website](https://developer.apple.com/downloads/index.action).
+the latest version installed. You can also get the command line tools from the
+[Apple developer website](https://developer.apple.com/downloads/index.action).
 
 ## Install IntelliJ IDE
-[Download](https://www.jetbrains.com/idea/) and install the Community edition of the IntelliJ IDE. You can
-also use the Ultimate edition, if you already have that version installed.
+Download and install the [Community edition of the IntelliJ IDE]((https://www.jetbrains.com/idea/)). You can
+also use the Ultimate edition if you already have that version installed.
 
 ## Install git 
 You can install [git](https://en.wikipedia.org/wiki/Git_\(software\)) in either of two ways:
 
-* With [brew](http://brew.sh) using : **brew install git**
-* Via the [git installer]((https://git-scm.com)).
+* With [brew](http://brew.sh) using: 
+
+``` bash
+brew install git
+```
+
+* With the [git installer]((https://git-scm.com)).
 
 ## Install sshpass
   Install sshpass using [these instructions](https://gist.github.com/arunoda/7790979).
-Using sshpass is ordinarily a bad idea because it exposes passwords, but in this case,
+Using sshpass is ordinarily a bad idea because it exposes passwords. But in this case,
 the EV3 password is not sensitive and sshpass is easier to deal with than 
 [ssh-keygen](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2).
 If you are comfortable using ssh-keygen, you can forgo installing sshpass and remove 
-the sshpass command prefix in the Makefile.
+the sshpass command prefix from the [Makefile](https://github.com/ev3dev-lang-java/mindstorm-tutorial/blob/master/Makefile).
 
 ## Create a Github account
 If you do not already have a [Github](https://github.com) account, 
@@ -44,7 +54,7 @@ go to Github and [sign up for one](https://github.com/join).
 
 ## Fork the Mindstorm Tutorial repo
 Go to the [Mindstorm Tutorial repo](https://github.com/ev3dev-lang-java/mindstorm-tutorial) and click on the 
-fork button in the uppoer right hand corner. This will create a copy of the repo in your Github account.
+Fork button in the uppoer right hand corner. This will create a copy of the repo in your Github account.
 
 ## Clone your forked Mindstorm Tutorial repo to your Mac
 
@@ -52,11 +62,12 @@ fork button in the uppoer right hand corner. This will create a copy of the repo
 
 * Copy the [HTTPS URL](https://help.github.com/articles/which-remote-url-should-i-use/) into your copy/paste buffer.
 
-* Open a Terminal window and using the URL you just copied as the **git clone** argument, type the following.
+* Open a Terminal window and, using the URL you just copied as the **git clone** argument, clone the repo with:
 
 ```bash
 mkdir git
 cd git
+# username in the next line should be your github account name
 git clone https://github.com/username/mindstorm-tutorial.git
 cd mindstorm-tutorial
 ls
@@ -132,7 +143,10 @@ Update the the ev3dev distro to the latest bits with:
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
+
+/sbin/shutdown --reboot now
 ```
 
 These commands will download and install the latest and greatest distro bits.
+The last command will reboot the EV3.
 
