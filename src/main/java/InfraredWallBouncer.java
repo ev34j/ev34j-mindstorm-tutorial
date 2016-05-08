@@ -8,7 +8,7 @@ public class InfraredWallBouncer {
   public static void main(final String[] args) {
 
     Ev3InfraredSensor ir = new Ev3InfraredSensor("4");
-    SteeringMotors sm = new SteeringMotors("A", "B");
+    SteeringMotors motors = new SteeringMotors("A", "B");
 
     // Wait for button press
     System.out.println("Pass hand in front of IR sensor to start");
@@ -18,7 +18,7 @@ public class InfraredWallBouncer {
     }
 
     // Start motors
-    sm.on(0, 15);
+    motors.on(0, 15);
 
     // Delay in case hand is still seen by the InfraredSensor
     Delay.delayMillis(500);
@@ -39,8 +39,8 @@ public class InfraredWallBouncer {
     }
 
     // Back up and stop
-    sm.onForRotations(1, 0, -50);
+    motors.onForRotations(1, 0, -50);
     Ev3Sound.sayAsEnglish("I got close to the wall");
-    sm.waitUntilStopped();
+    motors.waitUntilStopped();
   }
 }

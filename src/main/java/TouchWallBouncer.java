@@ -7,7 +7,7 @@ public class TouchWallBouncer {
   public static void main(final String[] args) {
 
     Ev3TouchSensor touch = new Ev3TouchSensor("1");
-    SteeringMotors steering = new SteeringMotors("A", "B");
+    SteeringMotors motors = new SteeringMotors("A", "B");
 
     // Wait for button press
     System.out.println("Press button to start");
@@ -15,14 +15,14 @@ public class TouchWallBouncer {
     touch.waitUntilBumped();
 
     // Start motors
-    steering.on(0, 25);
+    motors.on(0, 25);
 
     // Wait for button press
     touch.waitUntilPressed();
 
     // Back up and stop
-    steering.onForRotations(2, 0, -50);
+    motors.onForRotations(2, 0, -50);
     Ev3Sound.sayAsEnglish("I hit the wall");
-    steering.waitUntilStopped();
+    motors.waitUntilStopped();
   }
 }

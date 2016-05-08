@@ -4,7 +4,6 @@ public class SimpleTankMotors {
 
   public static void main(String[] args) {
 
-    // Run the motors as a TankMotors object
     System.out.println("Trying out TankMotors");
     TankMotors motors = new TankMotors("A", "B");
 

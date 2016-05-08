@@ -4,7 +4,6 @@ public class SimpleSteeringMotors {
 
   public static void main(String[] args) {
 
-    // Run the motors as a SteeringMotors object
     System.out.println("Trying out SteeringMotors");
     SteeringMotors motors = new SteeringMotors("A", "B");
 
