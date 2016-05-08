@@ -11,12 +11,16 @@ Before you can run Java programs on your EV3 you have to:
 
 ## Download the repo 
 
-You have two options for downloading the repo:
+Open a [Terminal](https://en.wikipedia.org/wiki/Terminal_(OS_X)) window and clone the
+[Mindstorm Tutorial repo](https://github.com/ev3dev-lang-java/ev3-mindstorm-tutorial) from [GitHub](https://github.com) with:
 
-1. [Clone](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Clone-the-EV34J-Mindstorm-Tutorial-repo) it.
-2. [Fork and clone](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Fork-and-clone-the-EV34J-Mindstorm-Tutorial-repo) it.
+```bash
+$ mkdir git
+$ cd git
+$ git clone https://github.com/ev3dev-lang-java/mindstorm-tutorial.git
+$ cd mindstorm-tutorial
+$ ls
+```
 
-Just cloning it is easier, but it will not allow you to push your changes back to github, 
-which the fork and clone option does.
 
 
