@@ -37,11 +37,14 @@ debug:
 	# Debug jar on EV3
 	$(SSH_PREFIX) ssh robot@$(EV3_NAME) java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar $(JAR_NAME)
 
+kill:
+	# Kill java process on EV3
+	$(SSH_PREFIX) ssh robot@$(EV3_NAME) kill $(ps aux | grep 'java' | awk '{print $2}')
+
 logging:
 	$(SSH_PREFIX) scp etc/$(LOG_PROP_NAME) robot@$(EV3_NAME):/home/robot
 	$(SSH_PREFIX) ssh robot@$(EV3_NAME) java -Djava.util.logging.config.file=$(LOG_PROP_NAME) -jar $(JAR_NAME)
 
 copy-scripts:
-	$(SSH_PREFIX) scp etc/scripts/run.sh robot@$(EV3_NAME):/home/robot
-	$(SSH_PREFIX) scp etc/scripts/debug.sh robot@$(EV3_NAME):/home/robot
+	$(SSH_PREFIX) scp etc/scripts/*.sh robot@$(EV3_NAME):/home/robot
 
