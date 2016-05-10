@@ -10,6 +10,7 @@ public class StatusLights {
     Ev3StatusLight left = Ev3StatusLights.left();
     Ev3StatusLight right = Ev3StatusLights.right();
 
+    Ev3Sound.setVolume(100);
     Ev3Sound.sayAsEnglish("Red");
     left.red();
     right.red();
@@ -28,6 +29,6 @@ public class StatusLights {
     Ev3Sound.sayAsEnglish("Off");
     left.off();
     right.off();
-
+    Delay.delaySecs(2);
   }
 }

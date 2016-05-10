@@ -22,5 +22,9 @@ $ cd mindstorm-tutorial
 $ ls
 ```
 
+## Running a program
+
+
+
 
 
