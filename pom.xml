@@ -13,7 +13,7 @@
     <mainclass.name>StatusLights</mainclass.name>
 
     <!-- Specify the ev34j version here -->
-    <ev34j.version>v0.3.6</ev34j.version>
+    <ev34j.version>v0.1.0</ev34j.version>
 
     <jdk.version>1.7</jdk.version>
     <maven.compiler.source>1.7</maven.compiler.source>
@@ -35,7 +35,7 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.github.ev3dev-lang-java.ev34j</groupId>
+      <groupId>com.github.ev34j.ev34j</groupId>
       <artifactId>ev34j-mindstorm</artifactId>
       <version>${ev34j.version}</version>
     </dependency>
