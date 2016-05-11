@@ -1,4 +1,4 @@
-# EV3 hostname
+# EV3 hostname -- if you cannot see the EV3 hostname on your network, you can also use an IP address here
 EV3_NAME = ev3dev
 
 # EV3 password

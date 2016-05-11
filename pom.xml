@@ -10,9 +10,11 @@
 
   <properties>
     <!-- Specify the class name you want to execute here -->
-    <mainclass.name>SimpleLargeMotors</mainclass.name>
+    <mainclass.name>StatusLights</mainclass.name>
 
-    <ev34j.version>v0.3.5</ev34j.version>
+    <!-- Specify the ev34j version here -->
+    <ev34j.version>v0.3.6</ev34j.version>
+
     <jdk.version>1.7</jdk.version>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
