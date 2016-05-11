@@ -27,7 +27,7 @@ Verify that you everything it setup properly with:
 
 ```bash
 $ # Compile the code
-$ make build
+$ make clean build
 $ # Copy it to your EV3
 $ make scp
 $ # Run the app on your EV3
@@ -35,6 +35,8 @@ $ make run
 ```
 
 ## Using IntelliJ to edit and run programs
+
+
 
 
 

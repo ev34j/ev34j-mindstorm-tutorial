@@ -30,5 +30,9 @@ public class StatusLights {
     left.off();
     right.off();
     Delay.delaySecs(2);
+
+    // Turn the leds green when complete
+    left.green();
+    right.green();
   }
 }

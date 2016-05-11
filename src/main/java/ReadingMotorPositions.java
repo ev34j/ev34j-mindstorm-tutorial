@@ -14,6 +14,7 @@ public class ReadingMotorPositions {
     int lastVal = -1;
     while (count <= 50) {
       int currVal = motor.getPosition();
+      // Do not print out the position if it is unchanged
       if (currVal != lastVal) {
         count++;
         lastVal = currVal;
