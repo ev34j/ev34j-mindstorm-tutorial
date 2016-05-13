@@ -13,7 +13,7 @@
     <mainclass.name>StatusLights</mainclass.name>
 
     <!-- Specify the ev34j version here -->
-    <ev34j.version>v0.1.0</ev34j.version>
+    <ev34j.version>v0.1.1</ev34j.version>
 
     <jdk.version>1.7</jdk.version>
     <maven.compiler.source>1.7</maven.compiler.source>

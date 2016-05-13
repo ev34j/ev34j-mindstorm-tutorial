@@ -12,7 +12,7 @@ public class SimpleLargeMotors {
     // Go forward for 1 second and then turn off motors
     lmA.on(25);
     lmB.on(25);
-    Delay.delaySecs(1);
+    Delay.secs(1);
     lmA.off();
     lmB.off();
 

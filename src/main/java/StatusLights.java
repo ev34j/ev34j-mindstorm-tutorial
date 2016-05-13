@@ -14,22 +14,22 @@ public class StatusLights {
     Ev3Sound.sayAsEnglish("Red");
     left.red();
     right.red();
-    Delay.delaySecs(2);
+    Delay.secs(2);
 
     Ev3Sound.sayAsEnglish("Green");
     left.green();
     right.green();
-    Delay.delaySecs(2);
+    Delay.secs(2);
 
     Ev3Sound.sayAsEnglish("Orange");
     left.orange();
     right.orange();
-    Delay.delaySecs(2);
+    Delay.secs(2);
 
     Ev3Sound.sayAsEnglish("Off");
     left.off();
     right.off();
-    Delay.delaySecs(2);
+    Delay.secs(2);
 
     // Turn the leds green when complete
     left.green();
