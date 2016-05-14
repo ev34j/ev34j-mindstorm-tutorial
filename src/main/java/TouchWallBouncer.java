@@ -11,7 +11,7 @@ public class TouchWallBouncer {
 
     // Wait for button press
     System.out.println("Press button to start");
-    Ev3Sound.sayAsEnglish("Press button to start");
+    Ev3Sound.sayAsEnglish("Press button to start", 100);
     touch.waitUntilBumped();
 
     // Start motors
@@ -22,7 +22,7 @@ public class TouchWallBouncer {
 
     // Back up and stop
     motors.onForRotations(2, 0, -50);
-    Ev3Sound.sayAsEnglish("I hit the wall");
+    Ev3Sound.sayAsEnglish("I hit the wall", 100);
     motors.waitUntilStopped();
   }
 }
