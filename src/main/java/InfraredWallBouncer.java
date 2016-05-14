@@ -1,7 +1,7 @@
-import com.ev34j.core.utils.Delay;
 import com.ev34j.mindstorm.motor.SteeringMotors;
 import com.ev34j.mindstorm.sensor.Ev3InfraredSensor;
 import com.ev34j.mindstorm.sound.Ev3Sound;
+import com.ev34j.mindstorm.utils.Wait;
 
 public class InfraredWallBouncer {
 
@@ -12,16 +12,16 @@ public class InfraredWallBouncer {
 
     // Wait for button press
     System.out.println("Pass hand in front of IR sensor to start");
-    Ev3Sound.sayAsEnglish("Pass hand in front of IR sensor to start");
+    Ev3Sound.sayAsEnglish("Pass hand in front of IR sensor to start", 100);
     while (ir.getDistancePercent() > 15) {
-      Delay.millis(10);
+      Wait.millis(10);
     }
 
     // Start motors
     motors.on(0, 15);
 
     // Delay in case hand is still seen by the InfraredSensor
-    Delay.millis(500);
+    Wait.millis(500);
 
     // Wait to get close to wall
     System.out.println("Getting close to wall before backing up");
@@ -35,12 +35,12 @@ public class InfraredWallBouncer {
         lastVal = currVal;
         System.out.printf("Distance: %s\n", lastVal);
       }
-      Delay.millis(10);
+      Wait.millis(10);
     }
 
     // Back up and stop
     motors.onForRotations(1, 0, -50);
-    Ev3Sound.sayAsEnglish("I got close to the wall");
+    Ev3Sound.sayAsEnglish("I got close to the wall", 100);
     motors.waitUntilStopped();
   }
 }

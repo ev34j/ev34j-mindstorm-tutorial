@@ -1,5 +1,5 @@
-import com.ev34j.core.utils.Delay;
 import com.ev34j.mindstorm.motor.MediumMotor;
+import com.ev34j.mindstorm.utils.Wait;
 
 public class ReadingMotorPositions {
 
@@ -20,7 +20,7 @@ public class ReadingMotorPositions {
         lastVal = currVal;
         System.out.printf("Medium motor position: %d\n", lastVal);
       }
-      Delay.millis(100);
+      Wait.millis(100);
     }
   }
 }
