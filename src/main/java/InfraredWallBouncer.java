@@ -12,7 +12,7 @@ public class InfraredWallBouncer {
 
     // Wait for button press
     System.out.println("Pass hand in front of IR sensor to start");
-    Ev3Sound.sayAsEnglish("Pass hand in front of IR sensor to start", 100);
+    Ev3Sound.say("Pass hand in front of IR sensor to start", 100);
     while (ir.getDistancePercent() > 15) {
       Wait.millis(10);
     }
@@ -40,7 +40,7 @@ public class InfraredWallBouncer {
 
     // Back up and stop
     motors.onForRotations(1, 0, -50);
-    Ev3Sound.sayAsEnglish("I got close to the wall", 100);
+    Ev3Sound.say("I got close to the wall", 100);
     motors.waitUntilStopped();
   }
 }

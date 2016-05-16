@@ -1,11 +1,12 @@
 # EV3 hostname -- if you cannot see the EV3 hostname on your network, you can also use an IP address here
 EV3_NAME = ev3dev
+#EV3_NAME = brickpi
 
 # EV3 password
 EV3_PASSWORD = maker
 
 # This name must match the <finalName> value in pom.xml
-JAR_NAME = myev3robot-jar-with-dependencies.jar
+JAR_NAME = ev3robot-jar-with-dependencies.jar
 
 # Logging file name
 LOG_PROP_NAME = logging.properties
@@ -27,6 +28,7 @@ build:
 scp:
 	# Copy jar file to EV3
 	$(SSH_PREFIX) scp target/$(JAR_NAME) robot@$(EV3_NAME):/home/robot
+#	$(SSH_PREFIX) scp firebase/target/$(JAR_NAME) robot@$(EV3_NAME):/home/robot
 	say "Copy complete"
 
 run:

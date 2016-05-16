@@ -1,3 +1,3 @@
 #!/bin/sh
 
-java -jar myev3robot-jar-with-dependencies.jar
+java -jar ev3robot-jar-with-dependencies.jar

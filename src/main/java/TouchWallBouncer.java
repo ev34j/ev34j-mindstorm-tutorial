@@ -10,19 +10,19 @@ public class TouchWallBouncer {
     SteeringMotors motors = new SteeringMotors("A", "B");
 
     // Wait for button press
-    System.out.println("Press button to start");
-    Ev3Sound.sayAsEnglish("Press button to start", 100);
+    System.out.println("Press touch sensor to start");
+    Ev3Sound.say("Press touch sensor to start", 100);
     touch.waitUntilBumped();
 
     // Start motors
     motors.on(0, 25);
 
-    // Wait for button press
+    // Wait for touch sensor press
     touch.waitUntilPressed();
 
     // Back up and stop
     motors.onForRotations(2, 0, -50);
-    Ev3Sound.sayAsEnglish("I hit the wall", 100);
+    Ev3Sound.say("I hit the wall", 100);
     motors.waitUntilStopped();
   }
 }
