@@ -7,14 +7,14 @@ public class SpeachAndNotes {
   public static void main(String[] args) {
 
     Ev3Sound.say("I am a LEGO robot", 100);
-    Wait.secs(1);
+    Wait.forSecs(1);
     Ev3Sound.say("Soy un robot LEGO", 100);
-    Wait.secs(1);
+    Wait.forSecs(1);
 
     Ev3Sound.playNote(Note.C4, 1, 100);
     Ev3Sound.playNote(Note.C4, 1, 100);
     Ev3Sound.playNote(Note.B5, 1, 100);
-    Wait.secs(1);
+    Wait.forSecs(1);
 
     // Play scale
     for (Note note : Note.values())

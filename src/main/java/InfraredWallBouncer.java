@@ -14,14 +14,14 @@ public class InfraredWallBouncer {
     System.out.println("Pass hand in front of IR sensor to start");
     Ev3Sound.say("Pass hand in front of IR sensor to start", 100);
     while (ir.getDistancePercent() > 15) {
-      Wait.millis(10);
+      Wait.forMillis(10);
     }
 
     // Start motors
     motors.on(0, 15);
 
     // Delay in case hand is still seen by the InfraredSensor
-    Wait.millis(500);
+    Wait.forMillis(500);
 
     // Wait to get close to wall
     System.out.println("Getting close to wall before backing up");
@@ -35,7 +35,7 @@ public class InfraredWallBouncer {
         lastVal = currVal;
         System.out.printf("Distance: %s\n", lastVal);
       }
-      Wait.millis(10);
+      Wait.forMillis(10);
     }
 
     // Back up and stop

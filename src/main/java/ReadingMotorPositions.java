@@ -20,7 +20,7 @@ public class ReadingMotorPositions {
         lastVal = currVal;
         System.out.printf("Medium motor position: %d\n", lastVal);
       }
-      Wait.millis(100);
+      Wait.forMillis(100);
     }
   }
 }
