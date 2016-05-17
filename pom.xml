@@ -17,7 +17,7 @@
     <mainclass.name>StatusLights</mainclass.name>
 
     <!-- Specify the ev34j version here -->
-    <ev34j.version>v0.1.4</ev34j.version>
+    <ev34j.version>v0.1.6</ev34j.version>
 
     <firebase.version>2.5.2</firebase.version>
 

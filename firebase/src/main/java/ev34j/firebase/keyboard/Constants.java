@@ -6,6 +6,9 @@ public interface Constants {
   String DEFAULT_USER   = "default_user";
   String DEFAULT_ROBOT  = "default_robot";
   String METRICS        = "metrics";
+  String STEERING       = "steering";
   String POWER1         = "power1";
   String POWER2         = "power2";
+  String POSITION1      = "position1";
+  String POSITION2      = "position2";
 }
