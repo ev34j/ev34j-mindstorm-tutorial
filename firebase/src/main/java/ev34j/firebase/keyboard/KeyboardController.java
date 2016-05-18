@@ -12,8 +12,8 @@ import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
-import java.util.concurrent.CountDownLatch;
 
+import static ev34j.firebase.keyboard.Constants.ACTION;
 import static ev34j.firebase.keyboard.Constants.DEFAULT_ROBOT;
 import static ev34j.firebase.keyboard.Constants.METRICS;
 import static ev34j.firebase.keyboard.Constants.POSITION1;
@@ -27,6 +27,7 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 public class KeyboardController {
 
   private static final String KEY_PRESSED_PREFIX = "Key pressed:";
+  private static final String ACTION_PREFIX      = "Action:";
   private static final String STEERING_PREFIX    = "Steering:";
   private static final String POWER1_PREFIX      = "Power1:";
   private static final String POWER2_PREFIX      = "Power2:";
@@ -41,6 +42,7 @@ public class KeyboardController {
     panel.setLayout(new GridLayout(10, 1, 5, 5));
 
     final JLabel keyPressed = new JLabel();
+    final JLabel action = new JLabel();
     final JLabel steering = new JLabel();
     final JLabel power1 = new JLabel();
     final JLabel power2 = new JLabel();
@@ -48,6 +50,7 @@ public class KeyboardController {
     final JLabel position2 = new JLabel();
 
     keyPressed.setText(" " + KEY_PRESSED_PREFIX);
+    action.setText(" " + ACTION_PREFIX);
     steering.setText(" " + STEERING_PREFIX);
     power1.setText(" " + POWER1_PREFIX);
     power2.setText(" " + POWER2_PREFIX);
@@ -55,6 +58,7 @@ public class KeyboardController {
     position2.setText(" " + POSITION2_PREFIX);
 
     panel.add(keyPressed);
+    panel.add(action);
     panel.add(steering);
     panel.add(power1);
     panel.add(power2);
@@ -68,14 +72,12 @@ public class KeyboardController {
                   @Override
                   public void actionPerformed(ActionEvent e) {
                     keyPressed.setText(format(" %s %s", KEY_PRESSED_PREFIX, type.name()));
-                    final CountDownLatch latch = new CountDownLatch(1);
                     final Firebase.CompletionListener listener =
                         new Firebase.CompletionListener() {
                           @Override
                           public void onComplete(final FirebaseError error, final Firebase firebase) {
                             if (error != null)
                               System.out.println(format("Data not writter: %s", error.getMessage()));
-                            latch.countDown();
                           }
                         };
 
@@ -97,7 +99,7 @@ public class KeyboardController {
                   public void onDataChange(final DataSnapshot dataSnapshot) {
                     for (DataSnapshot child : dataSnapshot.getChildren()) {
                       final String metric = child.getKey();
-                      final int value = child.getValue(RobotData.class).getValue();
+                      final int value = child.getValue(RobotMetric.class).getValue();
                       switch (metric) {
                         case STEERING:
                           steering.setText(format(" %s %s", STEERING_PREFIX, value));
@@ -116,6 +118,23 @@ public class KeyboardController {
                           break;
                       }
                     }
+                  }
+
+                  @Override
+                  public void onCancelled(final FirebaseError error) {
+                    System.out.println(String.format("ValueEventListener.onCancelled() : %s", error.getMessage()));
+                  }
+                });
+
+    firebase.getRoot()
+            .child(DEFAULT_ROBOT)
+            .child(ACTION)
+            .addValueEventListener(
+                new ValueEventListener() {
+                  @Override
+                  public void onDataChange(final DataSnapshot dataSnapshot) {
+                    final String val = dataSnapshot.getValue(RobotAction.class).getAction();
+                    action.setText(format(" %s %s", ACTION_PREFIX, val));
                   }
 
                   @Override

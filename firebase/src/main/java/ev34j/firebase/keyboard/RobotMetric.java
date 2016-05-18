@@ -1,15 +1,15 @@
 package ev34j.firebase.keyboard;
 
-public class RobotData {
+public class RobotMetric {
 
   private final long timeStamp = System.currentTimeMillis();
 
   private String metric;
   private int    value;
 
-  public RobotData() { }
+  public RobotMetric() { }
 
-  public RobotData(final String metric, final int value) {
+  public RobotMetric(final String metric, final int value) {
     this.metric = metric;
     this.value = value;
   }
