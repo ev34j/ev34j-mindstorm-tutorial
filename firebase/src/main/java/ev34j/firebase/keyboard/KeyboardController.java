@@ -96,25 +96,24 @@ public class KeyboardController {
                   @Override
                   public void onDataChange(final DataSnapshot dataSnapshot) {
                     for (DataSnapshot child : dataSnapshot.getChildren()) {
-                      if (child.getKey().equals(STEERING)) {
-                        final RobotData data = child.getValue(RobotData.class);
-                        power1.setText(format(" %s %s", STEERING_PREFIX, data.getValue()));
-                      }
-                      else if (child.getKey().equals(POWER1)) {
-                        final RobotData data = child.getValue(RobotData.class);
-                        power1.setText(format(" %s %s", POWER1_PREFIX, data.getValue()));
-                      }
-                      else if (child.getKey().equals(POWER2)) {
-                        final RobotData data = child.getValue(RobotData.class);
-                        power2.setText(format(" %s %s", POWER2_PREFIX, data.getValue()));
-                      }
-                      else if (child.getKey().equals(POSITION1)) {
-                        final RobotData data = child.getValue(RobotData.class);
-                        power2.setText(format(" %s %s", POSITION1_PREFIX, data.getValue()));
-                      }
-                      else if (child.getKey().equals(POSITION2)) {
-                        final RobotData data = child.getValue(RobotData.class);
-                        power2.setText(format(" %s %s", POSITION2_PREFIX, data.getValue()));
+                      final String metric = child.getKey();
+                      final int value = child.getValue(RobotData.class).getValue();
+                      switch (metric) {
+                        case STEERING:
+                          steering.setText(format(" %s %s", STEERING_PREFIX, value));
+                          break;
+                        case POWER1:
+                          power1.setText(format(" %s %s", POWER1_PREFIX, value));
+                          break;
+                        case POWER2:
+                          power2.setText(format(" %s %s", POWER2_PREFIX, value));
+                          break;
+                        case POSITION1:
+                          position1.setText(format(" %s %s", POSITION1_PREFIX, value));
+                          break;
+                        case POSITION2:
+                          position2.setText(format(" %s %s", POSITION2_PREFIX, value));
+                          break;
                       }
                     }
                   }
