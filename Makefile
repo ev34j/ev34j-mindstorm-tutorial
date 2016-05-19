@@ -27,8 +27,7 @@ build:
 
 scp:
 	# Copy jar file to EV3
-	#$(SSH_PREFIX) scp target/$(JAR_NAME) robot@$(EV3_NAME):/home/robot
-	$(SSH_PREFIX) scp firebase/target/$(JAR_NAME) robot@$(EV3_NAME):/home/robot
+	$(SSH_PREFIX) scp target/$(JAR_NAME) robot@$(EV3_NAME):/home/robot
 	say "Copy complete"
 
 run:
