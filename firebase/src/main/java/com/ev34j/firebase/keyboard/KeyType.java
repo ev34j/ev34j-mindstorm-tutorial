@@ -1,4 +1,4 @@
-package ev34j.firebase.keyboard;
+package com.ev34j.firebase.keyboard;
 
 import static java.awt.event.InputEvent.SHIFT_MASK;
 import static java.awt.event.KeyEvent.VK_0;

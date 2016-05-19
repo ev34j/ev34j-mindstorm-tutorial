@@ -1,4 +1,4 @@
-package ev34j.firebase.keyboard;
+package com.ev34j.firebase.keyboard;
 
 import com.firebase.client.DataSnapshot;
 import com.firebase.client.Firebase;
@@ -13,14 +13,14 @@ import javax.swing.KeyStroke;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 
-import static ev34j.firebase.keyboard.Constants.ACTION;
-import static ev34j.firebase.keyboard.Constants.DEFAULT_ROBOT;
-import static ev34j.firebase.keyboard.Constants.METRICS;
-import static ev34j.firebase.keyboard.Constants.POSITION1;
-import static ev34j.firebase.keyboard.Constants.POSITION2;
-import static ev34j.firebase.keyboard.Constants.POWER1;
-import static ev34j.firebase.keyboard.Constants.POWER2;
-import static ev34j.firebase.keyboard.Constants.STEERING;
+import static com.ev34j.firebase.keyboard.Constants.ACTION;
+import static com.ev34j.firebase.keyboard.Constants.DEFAULT_ROBOT;
+import static com.ev34j.firebase.keyboard.Constants.METRICS;
+import static com.ev34j.firebase.keyboard.Constants.POSITION1;
+import static com.ev34j.firebase.keyboard.Constants.POSITION2;
+import static com.ev34j.firebase.keyboard.Constants.POWER1;
+import static com.ev34j.firebase.keyboard.Constants.POWER2;
+import static com.ev34j.firebase.keyboard.Constants.STEERING;
 import static java.lang.String.format;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 

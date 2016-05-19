@@ -1,4 +1,4 @@
-package ev34j.firebase.keyboard;
+package com.ev34j.firebase.keyboard;
 
 public class RobotAction {
 

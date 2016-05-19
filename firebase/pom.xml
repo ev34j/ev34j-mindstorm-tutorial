@@ -50,7 +50,7 @@
               </descriptorRefs>
               <archive>
                 <manifest>
-                  <mainClass>ev34j.firebase.keyboard.KeyboardControlledRobot</mainClass>
+                  <mainClass>com.ev34j.firebase.keyboard.KeyboardControlledRobot</mainClass>
                   <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                 </manifest>
               </archive>

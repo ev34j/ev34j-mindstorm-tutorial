@@ -17,7 +17,8 @@
     <mainclass.name>StatusLights</mainclass.name>
 
     <!-- Specify the ev34j version here -->
-    <ev34j.version>v0.1.7</ev34j.version>
+    <ev34j.version>v0.1.9</ev34j.version>
+    <!--<ev34j.version>0.1.9-SNAPSHOT</ev34j.version>-->
 
     <firebase.version>2.5.2</firebase.version>
 
@@ -42,6 +43,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.ev34j.ev34j</groupId>
+      <!--<groupId>com.github.ev34j</groupId>-->
       <artifactId>ev34j-mindstorm</artifactId>
       <version>${ev34j.version}</version>
     </dependency>
