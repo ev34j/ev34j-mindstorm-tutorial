@@ -26,7 +26,7 @@ $ ls
 Verify that you everything it setup properly with:
 
 ```bash
-$ # Compile the code
+$ # Build the jar
 $ make clean build
 $ # Copy it to your EV3
 $ make scp
