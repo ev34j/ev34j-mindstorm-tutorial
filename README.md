@@ -46,10 +46,10 @@ and the javadocs are [here](http://docs.ev34j.com).
 The [pom.xml](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/pom.xml)
 is used to specify the dependancies of your program. The two relevant properties are:
 
-| Property               | Value                                                            |
-| ---------------------- | -----------------------------------------------------------------|
-| **<ev34j.version>**    | update when the underlying ev34j library changes                 |
-| **<mainclass.name>**   | set this to the name of the java class that you want to execute  |
+| Property                   | Value                                                            |
+| -------------------------- | -----------------------------------------------------------------|
+| **&lt;ev34j.version&gt;**  | update when the underlying ev34j library changes                 |
+| **&lt;mainclass.name&gt;** | set this to the name of the java class that you want to execute  |
 
 ### Makefile
 The [Makefile](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/Makefile) is provided to
