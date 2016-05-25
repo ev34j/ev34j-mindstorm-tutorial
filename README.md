@@ -110,8 +110,9 @@ programs very easy.
 
 Adding toolbar buttons is a two step process:
 
-1) [Add External Tools](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Intellij-External-Tools) to build, copy, run and debug programs
-2) [Add buttons to the Toolbar](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Toolbar-Buttons) and map them to External Tools
+1. [Add External Tools](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Intellij-External-Tools) to build, copy, run and debug programs
+
+2. [Add buttons to the Toolbar](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Toolbar-Buttons) and map them to External Tools
 
 
 
