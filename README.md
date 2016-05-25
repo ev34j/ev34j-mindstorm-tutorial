@@ -75,7 +75,7 @@ The *Makefile* has the following targets:
 | **debug**           | execute the jar file in the debgugger mode on the EV3   |
 | **logging**         | execute the jar file with logging enabled on the EV3    |
 | **kill**            | kill all java processes running on the EV3              |
-| **copy-scripts**    | copy command-line execution scripts to the EV3          |
+| **copy-scripts**    | copy convenient command-line scripts to the EV3         |
 
 To build and run a program from the OSX command line:
 
@@ -120,7 +120,7 @@ Adding toolbar buttons is a two step process:
 
 You can do this multiple ways:
 
-* Click on the **Debug program on EV3** button
+* Click on the **Debug program on EV3** toolbar button
 
 * On the OSX command-line:
 
@@ -145,7 +145,7 @@ Listening for transport dt_socket at address: 5005
 
 1. [Create a remote configuration](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Create-a-Remote-Configuration).
 
-2. Click on **Run** --> **Debug...*** and then choose the newly created Remote configuration.
+2. Click on **Run** --> **Debug...** and then choose the newly created Remote configuration.
 
 3. See the IntelliJ [documentation](https://www.jetbrains.com/help/idea/2016.1/debugging.html) for how to
 set breakpoints and step through a program.
