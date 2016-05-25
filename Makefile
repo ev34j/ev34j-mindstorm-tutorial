@@ -1,6 +1,6 @@
 # EV3 hostname -- if you cannot see the EV3 hostname on your network, you can also use an IP address here
-EV3_NAME = ev3dev
-#EV3_NAME = brickpi
+EV3_HOSTNAME = ev3dev
+#EV3_HOSTNAME = brickpi
 
 # EV3 password
 EV3_PASSWORD = maker
@@ -18,6 +18,7 @@ SSH_PREFIX = sshpass -p $(EV3_PASSWORD)
 default: build scp
 
 clean:
+	# Clear target output directory
 	mvn clean
 
 build:
@@ -27,25 +28,25 @@ build:
 
 scp:
 	# Copy jar file to EV3
-	$(SSH_PREFIX) scp target/$(JAR_NAME) robot@$(EV3_NAME):/home/robot
+	$(SSH_PREFIX) scp target/$(JAR_NAME) robot@$(EV3_HOSTNAME):/home/robot
 	say "Copy complete"
 
 run:
 	# Run jar on EV3
-	$(SSH_PREFIX) ssh robot@$(EV3_NAME) java -jar $(JAR_NAME)
+	$(SSH_PREFIX) ssh robot@$(EV3_HOSTNAME) java -jar $(JAR_NAME)
 
 debug:
 	# Debug jar on EV3
-	$(SSH_PREFIX) ssh robot@$(EV3_NAME) java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar $(JAR_NAME)
+	$(SSH_PREFIX) ssh robot@$(EV3_HOSTNAME) java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar $(JAR_NAME)
+
+logging:
+	$(SSH_PREFIX) scp etc/$(LOG_PROP_NAME) robot@$(EV3_HOSTNAME):/home/robot
+	$(SSH_PREFIX) ssh robot@$(EV3_HOSTNAME) java -Djava.util.logging.config.file=$(LOG_PROP_NAME) -jar $(JAR_NAME)
 
 kill:
 	# Kill java process on EV3
-	$(SSH_PREFIX) ssh robot@$(EV3_NAME) kill $(ps aux | grep 'java' | awk '{print $2}')
-
-logging:
-	$(SSH_PREFIX) scp etc/$(LOG_PROP_NAME) robot@$(EV3_NAME):/home/robot
-	$(SSH_PREFIX) ssh robot@$(EV3_NAME) java -Djava.util.logging.config.file=$(LOG_PROP_NAME) -jar $(JAR_NAME)
+	$(SSH_PREFIX) ssh robot@$(EV3_HOSTNAME) kill -9 $(ps aux | grep 'java' | awk '{print $2}')
 
 copy-scripts:
-	$(SSH_PREFIX) scp etc/scripts/*.sh robot@$(EV3_NAME):/home/robot
+	$(SSH_PREFIX) scp etc/scripts/*.sh robot@$(EV3_HOSTNAME):/home/robot
 
