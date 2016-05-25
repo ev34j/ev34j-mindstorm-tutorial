@@ -2,17 +2,18 @@
 
 ## System setup
 
-Before you can run Java programs on your EV3 you have to:
+Before you can run Java programs on the EV3 there is some setup required:
 
 1. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Install-required-Mac-software) on your Mac.
 2. [Create a bootable image](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Create-a-bootable-image-for-the-EV3) of the [ev3dev distro](http://www.ev3dev.org) on a micro SD card.
 3. [Establish a network connection](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Establish-a-network-connection) on your EV3.
 4. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Install-required-EV3-software) on your EV3.
 
-## Clone the ev34j-mindstorm tutorial
+## Clone the ev34j-mindstorm tutorial repo
 
 Open a [Terminal](https://en.wikipedia.org/wiki/Terminal_(OS_X)) window and clone the
-[Mindstorm Tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial) from [GitHub](https://github.com) with:
+[Mindstorm Tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial) from [GitHub](https://github.com)
+with:
 
 ```bash
 $ cd ~
@@ -40,7 +41,7 @@ The ev34j-mindstorm classes are outlined
 [here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorm-Object-Summary)
 and the javadocs are [here](http://docs.ev34j.com).
 
-## Building and running programs
+## Build and run programs
 
 ### pom.xml
 The [pom.xml](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/pom.xml)
@@ -80,8 +81,11 @@ The steps to build and run a program from the command line would be:
 
 ```bash
 $ cd ev34j-mindstorm
+$ # Build the jar
 $ make build
+$ # Copy the jar to the EV3
 $ make scp
+$ # Run the app on the EV3
 $ make run
 ```
 
@@ -96,7 +100,7 @@ robot@ev3dev:~$ java -jar ev3robot-jar-with-dependencies.jar
 ```
 
 **Remember** to rebuild the jar and copy it to the EV3 after making changes in the
-source code. Also, if you rename your main java class or change to a different class, make sure you
+source code. Also, if you rename your main java class or want to execute a different class, make sure you
 update the **&lt;mainclass.name&gt;** value in the pom.xml.
 
 ## Building and running programs with IntelliJ

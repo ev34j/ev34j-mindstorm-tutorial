@@ -9,21 +9,26 @@ public class NumberDialer {
     MediumMotor motor = new MediumMotor("A");
     motor.reset();
 
-    int lastVal = motor.getPosition();
+    System.out.println("Ready");
+    Ev3Display.drawString(true, "Ready", 40, 60, 30, true);
+    Ev3Sound.say("Ready", 100);
 
+    int lastVal = motor.getPosition();
     while (lastVal > -360 && lastVal < 360) {
       int newVal = motor.getPosition();
       if (newVal == lastVal) {
-        Wait.forMillis(200);
+        Ev3Display.refresh();
+        Wait.forMillis(100);
       }
       else {
+        System.out.println("Wheel value = " + newVal);
+        Ev3Display.drawString(true, "" + newVal, 60, 60, 30, true);
         Ev3Sound.say("Going " + (newVal < lastVal ? "down" : "up"), 100);
-        Ev3Display.drawString(true, "" + newVal, 10, 10, 12, true);
-        System.out.println("New val = " + newVal);
         lastVal = newVal;
       }
     }
 
+    Ev3Sound.say("Goodbye", 100);
     System.out.println("Exiting");
   }
 }
