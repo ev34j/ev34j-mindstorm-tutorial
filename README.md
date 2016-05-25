@@ -44,10 +44,10 @@ and the javadocs are [here](http://docs.ev34j.com).
 
 ### pom.xml
 The [pom.xml](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/pom.xml)
-is used to specify the dependancies of your program. The two relevant properties are:
+contains the configuration information required to build a project. The two relevant properties are:
 
 | Property                   | Value                                                            |
-| -------------------------- | -----------------------------------------------------------------|
+|----------------------------|------------------------------------------------------------------|
 | **&lt;ev34j.version&gt;**  | update when the underlying ev34j library changes                 |
 | **&lt;mainclass.name&gt;** | set this to the name of the java class that you want to execute  |
 
@@ -56,18 +56,17 @@ The [Makefile](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/Mak
 make building and running programs easy. The configuration variables at the top *Makefile* include:
 
 | Variable                | Value                                                       |
-| ----------------------- | ----------------------------------------------------------- |
+|-------------------------|-------------------------------------------------------------|
 | **EV3_HOSTNAME**        | Update if you updated the value in /etc/hostname on the EV3 |
 | **EV3_PASSWORD**        | Update if you change the default password on the EV3        |
 | **JAR_NAME**            | No reason to change                                         |
 | **LOG_PROP_NAME**       | No reason to change                                         |
-| **SSH_PREFIX**          | Set to blank if you use [SSH keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2)
-instead of [sshpass](https://gist.github.com/arunoda/7790979) |
+| **SSH_PREFIX**          | Set to blank if you use [SSH keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2) instead of [sshpass](https://gist.github.com/arunoda/7790979) |
 
 The *Makefile* has the following targets:
 
 | Target              | Action                                                  |
-| ------------------- | ------------------------------------------------------- |
+|---------------------|---------------------------------------------------------|
 | **clean**           | erase everything in the target directory                |
 | **build**           | build the uber-jar file                                 |
 | **scp**             | copy the jar file to the EV3                            |
