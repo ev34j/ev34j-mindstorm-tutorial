@@ -1,4 +1,4 @@
-# EV34J Mindstorm Tutorial 
+# Ev34j Mindstorm Tutorial
 
 ## System setup
 
@@ -9,7 +9,7 @@ Before you can run Java programs on your EV3 you have to:
 3. [Establish a network connection](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Establish-a-network-connection) on your EV3.
 4. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Install-required-EV3-software) on your EV3.
 
-## Download the EV34J Mindstorm Tutorial
+## Clone the ev34j-mindstorm tutorial
 
 Open a [Terminal](https://en.wikipedia.org/wiki/Terminal_(OS_X)) window and clone the
 [Mindstorm Tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial) from [GitHub](https://github.com) with:
@@ -35,6 +35,10 @@ $ make run
 ```
 
 ## Using IntelliJ to edit and run programs
+
+The javadocs for the ev34j-mindstorm classes are [here](http://ev34j.github.io/ev34j/).
+
+
 
 
 
