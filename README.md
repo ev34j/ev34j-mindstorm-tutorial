@@ -74,14 +74,30 @@ The *Makefile* has the following targets:
 | **debug**           | execute the jar file in the debgugger mode on the EV3   |
 | **logging**         | execute the jar file with logging enabled on the EV3    |
 | **kill**            | kill all java processes running on the EV3              |
+| **copy-scripts**    | copy command-line execution scripts the EV3             |
 
 The steps to build and run a program from the command line would be:
 
 ```bash
 $ cd ev34j-mindstorm
 $ make build
+$ make scp
 $ make run
 ```
+
+You could also execute the program while logged into the EV3:
+
+```bash
+$ make copy-scripts
+$ ssh robot@ev3dev
+robot@ev3dev:~$ run.sh
+robot@ev3dev:~$ # Or you can invoke the jar directly with java
+robot@ev3dev:~$ java -jar ev3robot-jar-with-dependencies.jar
+```
+
+**Remember** to rebuild the jar and copy it to the EV3 after making changes in the
+source code. Also, if you rename your main java class or change to a different class, make sure you
+update the **&lt;mainclass.name&gt;** value in the pom.xml.
 
 ## Building and running programs with IntelliJ
 
