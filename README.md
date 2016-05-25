@@ -77,7 +77,7 @@ The *Makefile* has the following targets:
 | **kill**            | kill all java processes running on the EV3              |
 | **copy-scripts**    | copy command-line execution scripts to the EV3          |
 
-The steps to build and run a program from the command line would be:
+To build and run a program from the OSX command line:
 
 ```bash
 $ cd ev34j-mindstorm
@@ -89,13 +89,13 @@ $ # Run the app on the EV3
 $ make run
 ```
 
-You could also execute the program while logged into the EV3:
+You can also execute a program from the EV3 command-line:
 
 ```bash
 $ make copy-scripts
 $ ssh robot@ev3dev
-robot@ev3dev:~$ run.sh
-robot@ev3dev:~$ # Or you can invoke the jar directly with java
+robot@ev3dev:~$ ./run.sh
+robot@ev3dev:~$ # Or you can use java directly
 robot@ev3dev:~$ java -jar ev3robot-jar-with-dependencies.jar
 ```
 
@@ -113,6 +113,34 @@ Adding toolbar buttons is a two step process:
 1. [Add External Tools](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Intellij-External-Tools) to build, copy, run and debug programs
 
 2. [Add buttons to the Toolbar](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Toolbar-Buttons) and map them to External Tools
+
+## Debugging a program with IntelliJ
+
+#### Start the program in debugging mode on the EV3:
+
+You can do this multiple ways:
+
+* Click on the **Debug program on EV3** button
+
+* On the OSX command-line:
+
+```bash
+$ make debug
+```
+
+* On the EV3 command-line:
+
+```bash
+robot@ev3dev:~$ debug.sh
+robot@ev3dev:~$ # or
+robot@ev3dev:~$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar
+```
+
+#### Run the IntelliJ debugger
+
+1. [Create a remote configuration](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Create-a-Remote-Configuration).
+
+2. Click on **Run** --> **Debug...*** and then choose the newly created Remote configuration.
 
 
 
