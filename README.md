@@ -54,11 +54,11 @@ contains the configuration information required to build the program. The two re
 
 ### Makefile
 The [Makefile](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/Makefile) is provided to
-make building and running programs easy. The configuration variables at the top *Makefile* include:
+make building and running programs easy. The configuration variables at the top of the *Makefile* include:
 
 | Variable                | Value                                                       |
 |:------------------------|:------------------------------------------------------------|
-| **EV3_HOSTNAME**        | Update if you updated the value in /etc/hostname on the EV3 |
+| **EV3_HOSTNAME**        | Update if you change /etc/hostname on the EV3 |
 | **EV3_PASSWORD**        | Update if you change the default password on the EV3        |
 | **JAR_NAME**            | No reason to change                                         |
 | **LOG_PROP_NAME**       | No reason to change                                         |
@@ -75,7 +75,7 @@ The *Makefile* has the following targets:
 | **debug**           | execute the jar file in the debgugger mode on the EV3   |
 | **logging**         | execute the jar file with logging enabled on the EV3    |
 | **kill**            | kill all java processes running on the EV3              |
-| **copy-scripts**    | copy command-line execution scripts the EV3             |
+| **copy-scripts**    | copy command-line execution scripts to the EV3          |
 
 The steps to build and run a program from the command line would be:
 
@@ -103,8 +103,14 @@ robot@ev3dev:~$ java -jar ev3robot-jar-with-dependencies.jar
 source code. Also, if you rename your main java class or want to execute a different class, make sure you
 update the **&lt;mainclass.name&gt;** value in the pom.xml.
 
-## Building and running programs with IntelliJ
+## Building and running programs from the IntelliJ Toolbar
 
+You can also add buttons to the IntelliJ Toolbar that make building and running your
+programs very easy.
+
+Adding toolbar buttons is a two step process:
+1) [Add External Tools](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Intellij-External-Tools) to build, copy, run and debug programs
+2) [Add buttons to the Toolbar](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Toolbar-Buttons) and map them to External Tools
 
 
 
