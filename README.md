@@ -116,7 +116,7 @@ Adding toolbar buttons is a two step process:
 
 ## Debugging a program with IntelliJ
 
-#### Start the program in debugging mode on the EV3:
+#### Start a program in debug mode on the EV3
 
 You can do this multiple ways:
 
@@ -126,14 +126,19 @@ You can do this multiple ways:
 
 ```bash
 $ make debug
+# Debug jar on EV3
+sshpass -p maker ssh robot@ev3dev1 java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar
+Listening for transport dt_socket at address: 5005
 ```
 
 * On the EV3 command-line:
 
 ```bash
 robot@ev3dev:~$ debug.sh
-robot@ev3dev:~$ # or
+Listening for transport dt_socket at address: 5005
+robot@ev3dev:~$ # Or
 robot@ev3dev:~$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar
+Listening for transport dt_socket at address: 5005
 ```
 
 #### Run the IntelliJ debugger
@@ -141,6 +146,33 @@ robot@ev3dev:~$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,addre
 1. [Create a remote configuration](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Create-a-Remote-Configuration).
 
 2. Click on **Run** --> **Debug...*** and then choose the newly created Remote configuration.
+
+3. See the IntelliJ [documentation](https://www.jetbrains.com/help/idea/2016.1/debugging.html) for how to
+set breakpoints and step through a program.
+
+#### Stopping a program on the EV3
+
+If you start a program with **make run** on OSX and then kill the process with **Ctrl-C**, the
+program might continue to run on the EV3, i.e., killing a make process on OSX does
+not kill the program on EV3. Before running the program again, you have to kill the still-running
+process.
+
+You can kill an EV3 program from the OSX command-line with:
+
+```bash
+$ make kill
+# Kill java process on EV3
+sshpass -p maker ssh robot@ev3dev1 ./kill.sh
+```
+
+You can kill an EV3 program from the EV3 command-line with:
+
+```bash
+robot@ev3dev:~$ ./kill.sh
+```
+
+ kill.sh is copied to the EV3 with **make copy-scripts**
+
 
 
 

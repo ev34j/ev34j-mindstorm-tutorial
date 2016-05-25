@@ -45,7 +45,7 @@ logging:
 
 kill:
 	# Kill java process on EV3
-	$(SSH_PREFIX) ssh robot@$(EV3_HOSTNAME) kill -9 $(ps aux | grep 'java' | awk '{print $2}')
+	$(SSH_PREFIX) ssh robot@$(EV3_HOSTNAME) ./kill.sh
 
 copy-scripts:
 	$(SSH_PREFIX) scp etc/scripts/*.sh robot@$(EV3_HOSTNAME):/home/robot
