@@ -1,6 +1,6 @@
 import com.ev34j.mindstorm.display.Ev3Display;
 import com.ev34j.mindstorm.sound.Ev3Sound;
-import com.ev34j.mindstorm.utils.Wait;
+import com.ev34j.mindstorm.time.Wait;
 
 import java.awt.Polygon;
 

@@ -1,7 +1,7 @@
 import com.ev34j.mindstorm.motor.SteeringMotors;
 import com.ev34j.mindstorm.sensor.Ev3InfraredSensor;
 import com.ev34j.mindstorm.sound.Ev3Sound;
-import com.ev34j.mindstorm.utils.Wait;
+import com.ev34j.mindstorm.time.Wait;
 
 public class InfraredWallBouncer {
 

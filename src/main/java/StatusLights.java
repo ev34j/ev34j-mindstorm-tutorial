@@ -4,7 +4,7 @@ import com.ev34j.mindstorm.leds.BrickPiStatusLights;
 import com.ev34j.mindstorm.leds.Ev3StatusLight;
 import com.ev34j.mindstorm.leds.Ev3StatusLights;
 import com.ev34j.mindstorm.sound.Ev3Sound;
-import com.ev34j.mindstorm.utils.Wait;
+import com.ev34j.mindstorm.time.Wait;
 
 public class StatusLights {
 

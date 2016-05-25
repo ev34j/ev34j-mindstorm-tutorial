@@ -2,7 +2,7 @@ import com.ev34j.core.sensor.AllSignaturesValues;
 import com.ev34j.core.sensor.ColorCodeValues;
 import com.ev34j.core.sensor.SignatureValues;
 import com.ev34j.mindstorm.sensor.Ev3PixySensor;
-import com.ev34j.mindstorm.utils.Wait;
+import com.ev34j.mindstorm.time.Wait;
 
 import static java.lang.String.format;
 
