@@ -27,6 +27,8 @@ $ ls
 Verify that you everything it setup properly with:
 
 ```bash
+$ # One-time copy of hte scripts
+$ make copy-scripts
 $ # Build the jar
 $ make clean build
 $ # Copy the jar to your EV3
@@ -34,12 +36,6 @@ $ make scp
 $ # Run the app on your EV3
 $ make run
 ```
-
-## The ev34j-mindstorm classes
-
-The ev34j-mindstorm classes are outlined
-[here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorm-Object-Summary)
-and the javadocs are [here](http://docs.ev34j.com).
 
 ## Build and run programs
 
@@ -134,7 +130,7 @@ Listening for transport dt_socket at address: 5005
 * On the EV3 command-line:
 
 ```bash
-robot@ev3dev:~$ debug.sh
+robot@ev3dev:~$ ./debug.sh
 Listening for transport dt_socket at address: 5005
 robot@ev3dev:~$ # Or
 robot@ev3dev:~$ java -agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005 -jar ev3robot-jar-with-dependencies.jar
@@ -171,7 +167,13 @@ You can kill an EV3 program from the EV3 command-line with:
 robot@ev3dev:~$ ./kill.sh
 ```
 
- kill.sh is copied to the EV3 with **make copy-scripts**
+kill.sh is copied to the EV3 with **make copy-scripts**
+
+## The ev34j-mindstorm classes
+
+The ev34j-mindstorm classes are outlined
+[here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorm-Object-Summary)
+and the javadocs are [here](http://docs.ev34j.com).
 
 
 
