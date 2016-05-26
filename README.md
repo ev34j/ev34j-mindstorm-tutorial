@@ -1,6 +1,10 @@
-# An ev34j-mindstorm Tutorial
+# An ev34j-mindstorm tutorial
 
 [![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial)
+
+This tutorial covers the basics of how to setup your EV3 and your
+OSX development environment. It also has some simple code examples
+of the [ev34j-mindstorm](https://github.com/ev34j/ev34j) objects.
 
 ## System setup
 
@@ -38,6 +42,9 @@ $ make scp
 $ # Run the app on your EV3
 $ make run
 ```
+
+If you get a "**make: *** [scp] Error 6**" error message, see [here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/FAQS).
+
 
 ## Build and run programs
 
@@ -177,7 +184,7 @@ $ make copy-scripts
 
 ## The ev34j-mindstorm classes
 
-The ev34j-mindstorm classes are outlined
+The [ev34j-mindstorm](https://github.com/ev34j/ev34j) classes are outlined
 [here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorm-Object-Summary)
 and the javadocs are [here](http://docs.ev34j.com).
 

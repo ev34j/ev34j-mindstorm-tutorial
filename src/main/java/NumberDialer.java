@@ -4,6 +4,7 @@ import com.ev34j.mindstorm.sound.Ev3Sound;
 import com.ev34j.mindstorm.time.Wait;
 
 public class NumberDialer {
+
   public static void main(String[] args) {
 
     MediumMotor motor = new MediumMotor("A");
