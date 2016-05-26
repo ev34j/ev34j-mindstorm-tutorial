@@ -1,6 +1,6 @@
 # An ev34j-mindstorm Tutorial
 
-[![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorm.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorm)
+[![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial)
 
 ## System setup
 
