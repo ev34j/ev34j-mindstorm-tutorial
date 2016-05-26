@@ -1,4 +1,6 @@
-# Ev34j Mindstorm Tutorial
+# An ev34j-mindstorm Tutorial
+
+[![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorm.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorm)
 
 ## System setup
 
@@ -12,7 +14,7 @@ Before you can run Java programs on the EV3 there is some setup required:
 ## Clone the ev34j-mindstorm tutorial repo
 
 Open a [Terminal](https://en.wikipedia.org/wiki/Terminal_(OS_X)) window and clone the
-[Mindstorm Tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial) from [GitHub](https://github.com)
+[ev34j-mindstorm-tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial) from [GitHub](https://github.com)
 with:
 
 ```bash
