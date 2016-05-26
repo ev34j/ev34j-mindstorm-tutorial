@@ -14,7 +14,7 @@ public class DisplayShow {
     for (int i = 0; i < 10; i++) {
       Ev3Display.clear();
       Wait.forMillis(200);
-      Ev3Display.inverse();
+      Ev3Display.reverse();
       Wait.forMillis(200);
     }
 

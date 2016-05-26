@@ -1,5 +1,5 @@
 # EV3 hostname -- if you cannot see the EV3 hostname on your network, you can also use an IP address here
-EV3_HOSTNAME = ev3dev1
+EV3_HOSTNAME = ev3dev2
 #EV3_HOSTNAME = brickpi
 
 # EV3 password

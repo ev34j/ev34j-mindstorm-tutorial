@@ -20,7 +20,7 @@ public class HelloWorld {
       // Flash the message for 10 seconds
       Timer t = new Timer(10);
       while (!t.isElapsed()) {
-        Ev3Display.inverse();
+        Ev3Display.reverse();
         Wait.forMillis(200);
       }
     }

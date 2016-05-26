@@ -10,7 +10,7 @@ public class InfraredWallBouncer {
     Ev3InfraredSensor ir = new Ev3InfraredSensor("4");
     SteeringMotors motors = new SteeringMotors("A", "B");
 
-    // Wait for button press
+    // Wait for a hand wave to start
     System.out.println("Pass hand in front of IR sensor to start");
     Ev3Sound.say("Pass hand in front of IR sensor to start", 100);
     while (ir.getDistancePercent() > 15) {
