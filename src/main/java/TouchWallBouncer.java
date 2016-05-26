@@ -1,6 +1,6 @@
-import com.ev34j.mindstorm.motor.SteeringMotors;
-import com.ev34j.mindstorm.sensor.Ev3TouchSensor;
-import com.ev34j.mindstorm.sound.Ev3Sound;
+import com.ev34j.mindstorms.motor.SteeringMotors;
+import com.ev34j.mindstorms.sensor.Ev3TouchSensor;
+import com.ev34j.mindstorms.sound.Ev3Sound;
 
 public class TouchWallBouncer {
 

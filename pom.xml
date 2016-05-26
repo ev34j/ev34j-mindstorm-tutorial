@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.ev34j</groupId>
-  <artifactId>ev34j-mindstorm-tutorial</artifactId>
+  <artifactId>ev34j-mindstorms-tutorial</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
 
@@ -14,7 +14,7 @@
     <mainclass.name>HelloWorld</mainclass.name>
 
     <!-- Specify the ev34j version here -->
-    <ev34j.version>v0.1.16</ev34j.version>
+    <ev34j.version>v0.1.18</ev34j.version>
 
     <jdk.version>1.7</jdk.version>
     <maven.compiler.source>1.7</maven.compiler.source>
@@ -37,7 +37,7 @@
   <dependencies>
     <dependency>
       <groupId>com.github.ev34j.ev34j</groupId>
-      <artifactId>ev34j-mindstorm</artifactId>
+      <artifactId>ev34j-mindstorms</artifactId>
       <version>${ev34j.version}</version>
     </dependency>
   </dependencies>

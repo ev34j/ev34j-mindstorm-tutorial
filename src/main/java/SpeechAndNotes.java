@@ -1,6 +1,6 @@
-import com.ev34j.mindstorm.sound.Ev3Sound;
-import com.ev34j.mindstorm.sound.Note;
-import com.ev34j.mindstorm.time.Wait;
+import com.ev34j.mindstorms.sound.Ev3Sound;
+import com.ev34j.mindstorms.sound.Note;
+import com.ev34j.mindstorms.time.Wait;
 
 public class SpeechAndNotes {
 

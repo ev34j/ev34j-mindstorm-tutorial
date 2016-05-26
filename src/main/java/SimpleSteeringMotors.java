@@ -1,4 +1,4 @@
-import com.ev34j.mindstorm.motor.SteeringMotors;
+import com.ev34j.mindstorms.motor.SteeringMotors;
 
 public class SimpleSteeringMotors {
 

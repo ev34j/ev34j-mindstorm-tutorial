@@ -1,8 +1,8 @@
-import com.ev34j.core.common.Platform;
-import com.ev34j.mindstorm.display.Ev3Display;
-import com.ev34j.mindstorm.sound.Ev3Sound;
-import com.ev34j.mindstorm.time.Timer;
-import com.ev34j.mindstorm.time.Wait;
+import com.ev34j.core.system.Platform;
+import com.ev34j.mindstorms.display.Ev3Display;
+import com.ev34j.mindstorms.sound.Ev3Sound;
+import com.ev34j.mindstorms.time.Timer;
+import com.ev34j.mindstorms.time.Wait;
 
 public class HelloWorld {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-import com.ev34j.mindstorm.sensor.NxtSoundSensor;
+import com.ev34j.mindstorms.sensor.NxtSoundSensor;
 
 import static java.lang.String.format;
 

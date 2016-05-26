@@ -1,25 +1,25 @@
-# An ev34j-mindstorm tutorial
+# An ev34j-mindstorms tutorial
 
-[![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial)
+[![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorms-tutorial.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorms-tutorial)
 
 This tutorial covers the basics of how to setup your EV3 and your
 OSX development environment. It also has some simple
-[code examples](https://github.com/ev34j/ev34j-mindstorm-tutorial/tree/master/src/main/java)
-of the [ev34j-mindstorm](https://github.com/ev34j/ev34j) objects.
+[code examples](https://github.com/ev34j/ev34j-mindstorms-tutorial/tree/master/src/main/java)
+of the [ev34j-mindstorms](https://github.com/ev34j/ev34j) objects.
 
 ## System setup
 
 Before you can run Java programs on the EV3 there is some setup required:
 
-1. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Install-required-Mac-software) on your Mac.
-2. [Create a bootable image](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Create-a-bootable-image-for-the-EV3) of the [ev3dev distro](http://www.ev3dev.org) on a micro SD card.
-3. [Establish a network connection](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Establish-a-network-connection) on your EV3.
-4. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial/wiki/Install-required-EV3-software) on your EV3.
+1. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Install-required-Mac-software) on your Mac.
+2. [Create a bootable image](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Create-a-bootable-image-for-the-EV3) of the [ev3dev distro](http://www.ev3dev.org) on a micro SD card.
+3. [Establish a network connection](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Establish-a-network-connection) on your EV3.
+4. [Install required software](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial/wiki/Install-required-EV3-software) on your EV3.
 
-## Clone the ev34j-mindstorm tutorial repo
+## Clone the ev34j-mindstorms tutorial repo
 
 Open a [Terminal](https://en.wikipedia.org/wiki/Terminal_(OS_X)) window and clone the
-[ev34j-mindstorm-tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorm-tutorial) from [GitHub](https://github.com)
+[ev34j-mindstorms-tutorial repo](https://github.com/ev3dev-lang-java/ev34j-mindstorms-tutorial) from [GitHub](https://github.com)
 with:
 
 ```bash
@@ -27,7 +27,7 @@ $ cd ~
 $ mkdir git
 $ cd git
 $ git clone https://github.com/ev3dev-lang-java/mindstorm-tutorial.git
-$ cd ev34j-mindstorm-tutorial
+$ cd ev34j-mindstorms-tutorial
 $ ls
 ```
 
@@ -44,13 +44,13 @@ $ # Run the app on your EV3
 $ make run
 ```
 
-If you get a "**make: *** [scp] Error 6**" error message, see the [FAQ](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/FAQ).
+If you get a "**make: *** [scp] Error 6**" error message, see the [FAQ](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/FAQ).
 
 
 ## Build and run programs
 
 ### pom.xml
-The [pom.xml](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/pom.xml)
+The [pom.xml](https://github.com/ev34j/ev34j-mindstorms-tutorial/blob/master/pom.xml)
 contains the configuration information required to build the program. The two relevant properties are:
 
 | Property                   | Value                                                            |
@@ -59,7 +59,7 @@ contains the configuration information required to build the program. The two re
 | &lt;mainclass.name&gt;     | set this to the name of the java class that you want to execute  |
 
 ### Makefile
-The [Makefile](https://github.com/ev34j/ev34j-mindstorm-tutorial/blob/master/Makefile) is provided to
+The [Makefile](https://github.com/ev34j/ev34j-mindstorms-tutorial/blob/master/Makefile) is provided to
 make building and running programs easy. The configuration variables at the top of the *Makefile* include:
 
 | Variable                | Value                                                       |
@@ -86,7 +86,7 @@ The *Makefile* has the following targets:
 To build and run a program from the OSX command line:
 
 ```bash
-$ cd ev34j-mindstorm
+$ cd ev34j-mindstorms-tutorial
 $ # Build the jar
 $ make build
 $ # Copy the jar to the EV3
@@ -116,9 +116,9 @@ programs very easy.
 
 Adding toolbar buttons is a two step process:
 
-1. [Add External Tools](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Intellij-External-Tools) to build, copy, run and debug programs
+1. [Add External Tools](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Add-Intellij-External-Tools) to build, copy, run and debug programs
 
-2. [Add buttons to the Toolbar](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Add-Toolbar-Buttons) and map them to External Tools
+2. [Add buttons to the Toolbar](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Add-Toolbar-Buttons) and map them to External Tools
 
 ## Debugging a program with IntelliJ
 
@@ -149,7 +149,7 @@ Listening for transport dt_socket at address: 5005
 
 #### Run the IntelliJ debugger
 
-1. [Create a remote configuration](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Create-a-Remote-Configuration).
+1. [Create a remote configuration](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Create-a-Remote-Configuration).
 
 2. Click on **Run** --> **Debug...** and then choose the newly created Remote configuration.
 
@@ -185,8 +185,8 @@ $ make copy-scripts
 
 ## The ev34j-mindstorm classes
 
-The [ev34j-mindstorm](https://github.com/ev34j/ev34j) classes are outlined
-[here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/Ev34j-Mindstorm-Object-Summary)
+The [ev34j-mindstorms](https://github.com/ev34j/ev34j) classes are outlined
+[here](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Ev34j-Mindstorms-Object-Summary)
 and the javadocs are [here](http://docs.ev34j.com).
 
 

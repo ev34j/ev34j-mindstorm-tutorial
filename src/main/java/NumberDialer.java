@@ -1,7 +1,7 @@
-import com.ev34j.mindstorm.display.Ev3Display;
-import com.ev34j.mindstorm.motor.MediumMotor;
-import com.ev34j.mindstorm.sound.Ev3Sound;
-import com.ev34j.mindstorm.time.Wait;
+import com.ev34j.mindstorms.display.Ev3Display;
+import com.ev34j.mindstorms.motor.MediumMotor;
+import com.ev34j.mindstorms.sound.Ev3Sound;
+import com.ev34j.mindstorms.time.Wait;
 
 public class NumberDialer {
 

@@ -1,5 +1,5 @@
-import com.ev34j.mindstorm.motor.MediumMotor;
-import com.ev34j.mindstorm.time.Wait;
+import com.ev34j.mindstorms.motor.MediumMotor;
+import com.ev34j.mindstorms.time.Wait;
 
 public class ReadingMotorPositions {
 

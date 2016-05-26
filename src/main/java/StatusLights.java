@@ -1,10 +1,10 @@
-import com.ev34j.core.common.Platform;
-import com.ev34j.mindstorm.leds.BrickPiStatusLight;
-import com.ev34j.mindstorm.leds.BrickPiStatusLights;
-import com.ev34j.mindstorm.leds.Ev3StatusLight;
-import com.ev34j.mindstorm.leds.Ev3StatusLights;
-import com.ev34j.mindstorm.sound.Ev3Sound;
-import com.ev34j.mindstorm.time.Wait;
+import com.ev34j.core.system.Platform;
+import com.ev34j.mindstorms.leds.BrickPiStatusLight;
+import com.ev34j.mindstorms.leds.BrickPiStatusLights;
+import com.ev34j.mindstorms.leds.Ev3StatusLight;
+import com.ev34j.mindstorms.leds.Ev3StatusLights;
+import com.ev34j.mindstorms.sound.Ev3Sound;
+import com.ev34j.mindstorms.time.Wait;
 
 public class StatusLights {
 

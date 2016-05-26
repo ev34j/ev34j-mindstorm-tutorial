@@ -1,4 +1,4 @@
-import com.ev34j.mindstorm.motor.TankMotors;
+import com.ev34j.mindstorms.motor.TankMotors;
 
 public class SimpleTankMotors {
 
