@@ -3,7 +3,8 @@
 [![Build Status](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial.svg?branch=master)](https://travis-ci.org/ev34j/ev34j-mindstorm-tutorial)
 
 This tutorial covers the basics of how to setup your EV3 and your
-OSX development environment. It also has some simple code examples
+OSX development environment. It also has some simple
+[code examples](https://github.com/ev34j/ev34j-mindstorm-tutorial/tree/master/src/main/java)
 of the [ev34j-mindstorm](https://github.com/ev34j/ev34j) objects.
 
 ## System setup
