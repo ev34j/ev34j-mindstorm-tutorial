@@ -29,6 +29,6 @@ public class NumberDialer {
     }
 
     Ev3Sound.say("Goodbye", 100);
-    System.out.println("Exiting");
+    System.out.println("Goodbye");
   }
 }
