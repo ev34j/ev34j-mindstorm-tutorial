@@ -44,7 +44,7 @@ $ # Run the app on your EV3
 $ make run
 ```
 
-If you get a "**make: *** [scp] Error 6**" error message, see [here](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/FAQS).
+If you get a "**make: *** [scp] Error 6**" error message, see the [FAQ](https://github.com/ev34j/ev34j-mindstorm-tutorial/wiki/FAQ).
 
 
 ## Build and run programs
