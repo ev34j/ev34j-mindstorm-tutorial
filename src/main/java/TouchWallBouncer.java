@@ -21,7 +21,7 @@ public class TouchWallBouncer {
     touch.waitUntilPressed();
 
     // Back up and stop
-    motors.onForRotations(2, 0, -50);
+    motors.onForRotations(0, -50, 2);
     Ev3Sound.say("I hit the wall", 100);
     motors.waitUntilStopped();
   }

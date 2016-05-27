@@ -39,7 +39,7 @@ public class InfraredWallBouncer {
     }
 
     // Back up and stop
-    motors.onForRotations(1, 0, -50);
+    motors.onForRotations(0, -50, 1);
     Ev3Sound.say("I got close to the wall", 100);
     motors.waitUntilStopped();
   }

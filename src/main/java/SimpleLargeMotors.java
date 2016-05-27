@@ -19,8 +19,8 @@ public class SimpleLargeMotors {
     lmB.off();
 
     // Go back for 1 rotation
-    lmA.onForRotations(1, -25);
-    lmB.onForRotations(1, -25);
+    lmA.onForRotations(-25, 1);
+    lmB.onForRotations(-25, 1);
 
     lmA.waitUntilStopped();
     lmB.waitUntilStopped();

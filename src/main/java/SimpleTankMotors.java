@@ -9,14 +9,14 @@ public class SimpleTankMotors {
     TankMotors motors = new TankMotors("A", "B");
 
     // Go forward 2 rotations at a 45 degree angle
-    motors.onForRotations(2, 12, 25);
+    motors.onForRotations(12, 25, 2);
     motors.waitUntilStopped();
 
     // Pause
     Wait.forSecs(1);
 
     // Go back 2 rotations at a 45 degree angle
-    motors.onForRotations(2, -12, -25);
+    motors.onForRotations(-12, -25, 2);
     motors.waitUntilStopped();
   }
 }
