@@ -107,7 +107,7 @@ robot@ev3dev:~$ java -jar ev3robot-jar-with-dependencies.jar
 
 **Remember** to rebuild the jar and copy it to the EV3 after making changes in the
 source code. Also, if you rename your main java class or want to execute a different class, make sure you
-update the **&lt;mainclass.name&gt;** value in the pom.xml.
+update the **&lt;mainclass.name&gt;** value in the [pom.xml](https://github.com/ev34j/ev34j-mindstorms-tutorial/blob/master/pom.xml).
 
 ## Building and running programs from the IntelliJ Toolbar
 
@@ -189,7 +189,10 @@ The [ev34j-mindstorms](https://github.com/ev34j/ev34j) classes are outlined
 [here](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Ev34j-Mindstorms-Object-Summary)
 and the javadocs are [here](http://docs.ev34j.com).
 
-Trivial sample programs are provided [here](https://github.com/ev34j/ev34j-mindstorms-tutorial/tree/master/src/main/java)
+Trivial sample programs are provided [here](https://github.com/ev34j/ev34j-mindstorms-tutorial/tree/master/src/main/java).
+To execute a program,
+update the **&lt;mainclass.name&gt;** value in the [pom.xml](https://github.com/ev34j/ev34j-mindstorms-tutorial/blob/master/pom.xml)
+with the name of the class you want to run.
 
 
 
