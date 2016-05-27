@@ -55,12 +55,12 @@ contains the configuration information required to build the program. The two re
 
 | Property                   | Value                                                            |
 |:---------------------------|:-----------------------------------------------------------------|
-| &lt;ev34j.version&gt;      | update when the underlying ev34j library changes                 |
-| &lt;mainclass.name&gt;     | set this to the name of the java class that you want to execute  |
+| &lt;ev34j.version&gt;      | Update when the underlying ev34j library changes                 |
+| &lt;mainclass.name&gt;     | Set this to the name of the java class that you want to execute  |
 
 ### Makefile
-The [Makefile](https://github.com/ev34j/ev34j-mindstorms-tutorial/blob/master/Makefile) is provided to
-make building and running programs easy. The configuration variables at the top of the *Makefile* include:
+The [Makefile](https://github.com/ev34j/ev34j-mindstorms-tutorial/blob/master/Makefile)
+simplifies building and running programs. The configuration variables at the top of the *Makefile* include:
 
 | Variable                | Value                                                       |
 |:------------------------|:------------------------------------------------------------|
@@ -70,18 +70,18 @@ make building and running programs easy. The configuration variables at the top 
 | LOG_PROP_NAME           | No reason to change                                         |
 | SSH_PREFIX              | Set to blank if you use [SSH keys](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2) instead of [sshpass](https://gist.github.com/arunoda/7790979) |
 
-The *Makefile* has the following targets:
+The *Makefile* has these targets:
 
 | Target              | Action                                                  |
 |:--------------------|:--------------------------------------------------------|
-| clean               | erase everything in the target directory                |
-| build               | build the uber-jar file                                 |
-| scp                 | copy the jar file to the EV3                            |
-| run                 | execute the jar file on the EV3                         |
-| debug               | execute the jar file in the debgugger mode on the EV3   |
-| logging             | execute the jar file with logging enabled on the EV3    |
-| kill                | kill all java processes running on the EV3              |
-| copy-scripts        | copy convenient command-line scripts to the EV3         |
+| clean               | Erase everything in the target directory                |
+| build               | Build the uber-jar file                                 |
+| scp                 | Copy the jar file to the EV3                            |
+| run                 | Execute the jar file on the EV3                         |
+| debug               | Execute the jar file in the debgugger mode on the EV3   |
+| logging             | Execute the jar file with logging enabled on the EV3    |
+| kill                | Kill all java processes running on the EV3              |
+| copy-scripts        | Copy convenient command-line scripts to the EV3         |
 
 To build and run a program from the OSX command line:
 
@@ -183,11 +183,13 @@ The kill.sh script is copied to the EV3 with:
 $ make copy-scripts
 ```
 
-## The ev34j-mindstorm classes
+## Using the ev34j-mindstorm classes
 
 The [ev34j-mindstorms](https://github.com/ev34j/ev34j) classes are outlined
 [here](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Ev34j-Mindstorms-Object-Summary)
 and the javadocs are [here](http://docs.ev34j.com).
+
+Trivial sample programs are provided [here](https://github.com/ev34j/ev34j-mindstorms-tutorial/tree/master/src/main/java)
 
 
 
