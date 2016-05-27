@@ -1,4 +1,5 @@
 import com.ev34j.mindstorms.motor.SteeringMotors;
+import com.ev34j.mindstorms.time.Wait;
 
 public class SimpleSteeringMotors {
 
@@ -7,12 +8,15 @@ public class SimpleSteeringMotors {
     System.out.println("Trying out SteeringMotors");
     SteeringMotors motors = new SteeringMotors("A", "B");
 
-    // Go forward at a 45 degree angle
-    motors.onForRotations(2, 50, 25);
+    // Go forward 2 rotations at 25% power
+    motors.onForRotations(2, 0, 25);
     motors.waitUntilStopped();
 
-    // Go back at a 45 degree angle
-    motors.onForRotations(2, 50, -25);
+    // Pause
+    Wait.forSecs(1);
+
+    // Go back 2 rotations at 25% power
+    motors.onForRotations(2, 0, -25);
     motors.waitUntilStopped();
   }
 }
