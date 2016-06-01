@@ -187,7 +187,7 @@ $ make copy-scripts
 
 The [ev34j-mindstorms](https://github.com/ev34j/ev34j) classes are outlined
 [here](https://github.com/ev34j/ev34j-mindstorms-tutorial/wiki/Ev34j-Mindstorms-Object-Summary)
-and the javadocs are [here](http://docs.ev34j.com).
+and the javadocs are [here](http://www.ev34j.com/javadocs/).
 
 Trivial sample programs are provided [here](https://github.com/ev34j/ev34j-mindstorms-tutorial/tree/master/src/main/java).
 To execute a program,
