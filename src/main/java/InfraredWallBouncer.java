@@ -18,7 +18,7 @@ public class InfraredWallBouncer {
     }
 
     // Start motors
-    motors.on(0, 15);
+    motors.on(0, 20);
 
     // Delay in case hand is still seen by the InfraredSensor
     Wait.forMillis(500);
@@ -28,7 +28,7 @@ public class InfraredWallBouncer {
     int lastVal = -1;
     while (true) {
       int currVal = ir.getDistancePercent();
-      if (currVal < 20)
+      if (currVal < 23)
         break;
 
       if (currVal != lastVal) {
