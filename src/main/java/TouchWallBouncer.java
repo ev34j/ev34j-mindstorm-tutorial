@@ -6,6 +6,7 @@ public class TouchWallBouncer {
 
   public static void main(final String[] args) {
 
+    // Declare sensor and motors
     Ev3TouchSensor touch = new Ev3TouchSensor("1");
     SteeringMotors motors = new SteeringMotors("A", "B");
 

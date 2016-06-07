@@ -7,6 +7,7 @@ public class InfraredWallBouncer {
 
   public static void main(final String[] args) {
 
+    // Declare sensor and motors
     Ev3InfraredSensor ir = new Ev3InfraredSensor("4");
     SteeringMotors motors = new SteeringMotors("A", "B");
 

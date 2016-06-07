@@ -6,6 +6,8 @@ public class SimpleLargeMotors {
   public static void main(String[] args) {
 
     System.out.println("Trying out LargeMotors");
+
+    // Declare motors
     LargeMotor lmA = new LargeMotor("A");
     LargeMotor lmB = new LargeMotor("B");
 

@@ -7,6 +7,7 @@ public class NumberDialer {
 
   public static void main(String[] args) {
 
+    // Declare motors
     MediumMotor motor = new MediumMotor("A");
     motor.reset();
 

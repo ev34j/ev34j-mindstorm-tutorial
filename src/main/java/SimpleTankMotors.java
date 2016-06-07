@@ -6,6 +6,8 @@ public class SimpleTankMotors {
   public static void main(String[] args) {
 
     System.out.println("Trying out TankMotors");
+
+    // Declare motors
     TankMotors motors = new TankMotors("A", "B");
 
     // Go forward 2 rotations at a 45 degree angle

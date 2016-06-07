@@ -8,6 +8,8 @@ public class ReadingMotorPositions {
     // Read the position value from a MediumMotor
     // Output the value only when the value changes
     // Stop after observing 50 new values
+
+    // Declare motors
     MediumMotor motor = new MediumMotor("D");
 
     int count = 0;
